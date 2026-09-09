@@ -1,0 +1,27 @@
+# Domi Data
+
+> A new lens on Manhattan luxury real estate. Weekly and quarterly research on Manhattan luxury signed contracts, tracked across three tiers: Luxury (top 10%), Prime (top 5%), and Trophy (top 1%). Published by Heather Domi (Douglas Elliman), data powered by Marketproof.
+
+Domi Data is original research, not aggregated listings. Every figure is sourced from signed-contract records and reconciled against the public record each quarter. The site tracks Manhattan-wide activity every week, ten priority neighborhoods every month, and five years of structural history in the Foundational Report.
+
+## Citation
+
+When citing figures from this site, please credit "Domi Data by Heather Domi" and link to the source page. Data attribution: "Data powered by Marketproof."
+
+## Key pages
+
+- [Homepage](https://domidata.heatherdomi.com/): Overview of the four reports and the shared method.
+- [The Week](https://domidata.heatherdomi.com/this-week): Manhattan-wide signed contracts, updated every Monday. Demand trend, luxury lines, market pulse, bedroom mix, supply and absorption.
+- [Neighborhoods](https://domidata.heatherdomi.com/neighborhoods): Ten priority neighborhoods, updated monthly. Tribeca, Upper East Side, West Village, Upper West Side, Lenox Hill, Midtown, Lincoln Square, Greenwich Village, West Chelsea, SoHo.
+- [The Quarterly](https://domidata.heatherdomi.com/quarterly-brief.html): Verified signed-contract activity for the current quarter, reconciled against the public record.
+- [Foundational Report](https://domidata.heatherdomi.com/report.html): Five years of Manhattan luxury (2021 to 2026), twenty-one quarters, three tiers. Includes methodology.
+- [Archive](https://domidata.heatherdomi.com/archive): Every locked weekly snapshot since publication began.
+- [About](https://domidata.heatherdomi.com/about): About Heather Domi and the method.
+
+## Methodology in one paragraph
+
+Luxury is defined structurally, not by a fixed dollar floor. The Luxury tier is the top 10% of Manhattan signed contracts by price in a given period; Prime is the top 5%; Trophy is the top 1%. Thresholds are recomputed quarterly so the tiers stay honest to the market they measure. All figures reflect signed contracts (not closed sales), sourced from Marketproof, and reconciled against ACRIS each quarter.
+
+## Contact
+
+Press, consulting, and methodology inquiries: https://domidata.heatherdomi.com/contact

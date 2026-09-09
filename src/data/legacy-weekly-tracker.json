@@ -1,0 +1,5801 @@
+[
+{
+"week_start": "2024-05-20",
+"condo_contracts": 84.0,
+"condo_volume": 275943431.0,
+"coop_contracts": 132.0,
+"coop_volume": 204814991.0,
+"th_contracts": 1.0,
+"th_volume": 2000000.0,
+"total_contracts": 217.0,
+"total_volume": 482758422.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 221.0,
+"mix": {
+"studio": {
+"contracts": 21.0,
+"volume": 10176999.0
+},
+"1": {
+"contracts": 76.0,
+"volume": 66859731.0
+},
+"2": {
+"contracts": 66.0,
+"volume": 135967694.0
+},
+"3": {
+"contracts": 40.0,
+"volume": 177468999.0
+},
+"4+": {
+"contracts": 18.0,
+"volume": 99884999.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-05-27",
+"condo_contracts": 67.0,
+"condo_volume": 238414400.0,
+"coop_contracts": 112.0,
+"coop_volume": 180843388.0,
+"th_contracts": 2.0,
+"th_volume": 28500000.0,
+"total_contracts": 181.0,
+"total_volume": 447757788.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 183.0,
+"mix": {
+"studio": {
+"contracts": 29.0,
+"volume": 15724500.0
+},
+"1": {
+"contracts": 62.0,
+"volume": 62840900.0
+},
+"2": {
+"contracts": 54.0,
+"volume": 97649388.0
+},
+"3": {
+"contracts": 22.0,
+"volume": 86838000.0
+},
+"4+": {
+"contracts": 16.0,
+"volume": 185835000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-06-03",
+"condo_contracts": 87.0,
+"condo_volume": 242834000.0,
+"coop_contracts": 120.0,
+"coop_volume": 164612993.0,
+"th_contracts": 2.0,
+"th_volume": 10750000.0,
+"total_contracts": 209.0,
+"total_volume": 418196993.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 214.0,
+"mix": {
+"studio": {
+"contracts": 22.0,
+"volume": 10958500.0
+},
+"1": {
+"contracts": 80.0,
+"volume": 69071499.0
+},
+"2": {
+"contracts": 57.0,
+"volume": 96106495.0
+},
+"3": {
+"contracts": 40.0,
+"volume": 149523999.0
+},
+"4+": {
+"contracts": 15.0,
+"volume": 105184000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-06-10",
+"condo_contracts": 93.0,
+"condo_volume": 254129292.0,
+"coop_contracts": 121.0,
+"coop_volume": 221960150.0,
+"th_contracts": 6.0,
+"th_volume": 42490000.0,
+"total_contracts": 220.0,
+"total_volume": 518579442.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 226.0,
+"mix": {
+"studio": {
+"contracts": 20.0,
+"volume": 9536750.0
+},
+"1": {
+"contracts": 78.0,
+"volume": 81604600.0
+},
+"2": {
+"contracts": 68.0,
+"volume": 134322942.0
+},
+"3": {
+"contracts": 36.0,
+"volume": 143381150.0
+},
+"4+": {
+"contracts": 24.0,
+"volume": 170629000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-06-17",
+"condo_contracts": 102.0,
+"condo_volume": 285549387.0,
+"coop_contracts": 114.0,
+"coop_volume": 206450899.0,
+"th_contracts": 4.0,
+"th_volume": 29345000.0,
+"total_contracts": 220.0,
+"total_volume": 521345286.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 223.0,
+"mix": {
+"studio": {
+"contracts": 19.0,
+"volume": 10038900.0
+},
+"1": {
+"contracts": 85.0,
+"volume": 92159498.0
+},
+"2": {
+"contracts": 67.0,
+"volume": 145890887.0
+},
+"3": {
+"contracts": 36.0,
+"volume": 148935000.0
+},
+"4+": {
+"contracts": 16.0,
+"volume": 126835000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-06-24",
+"condo_contracts": 114.0,
+"condo_volume": 294517296.0,
+"coop_contracts": 120.0,
+"coop_volume": 168353649.0,
+"th_contracts": 4.0,
+"th_volume": 33545000.0,
+"total_contracts": 238.0,
+"total_volume": 496415945.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 237.0,
+"mix": {
+"studio": {
+"contracts": 25.0,
+"volume": 13383249.0
+},
+"1": {
+"contracts": 86.0,
+"volume": 94890198.0
+},
+"2": {
+"contracts": 79.0,
+"volume": 161123998.0
+},
+"3": {
+"contracts": 28.0,
+"volume": 103213500.0
+},
+"4+": {
+"contracts": 19.0,
+"volume": 121455000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-07-01",
+"condo_contracts": 70.0,
+"condo_volume": 185253499.0,
+"coop_contracts": 88.0,
+"coop_volume": 144189698.0,
+"th_contracts": 3.0,
+"th_volume": 29495000.0,
+"total_contracts": 161.0,
+"total_volume": 358938197.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 160.0,
+"mix": {
+"studio": {
+"contracts": 25.0,
+"volume": 13949400.0
+},
+"1": {
+"contracts": 62.0,
+"volume": 61609500.0
+},
+"2": {
+"contracts": 40.0,
+"volume": 87454297.0
+},
+"3": {
+"contracts": 20.0,
+"volume": 81687000.0
+},
+"4+": {
+"contracts": 13.0,
+"volume": 109748000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-07-08",
+"condo_contracts": 89.0,
+"condo_volume": 244975097.0,
+"coop_contracts": 94.0,
+"coop_volume": 102170490.0,
+"th_contracts": 5.0,
+"th_volume": 67589500.0,
+"total_contracts": 188.0,
+"total_volume": 414735087.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 189.0,
+"mix": {
+"studio": {
+"contracts": 21.0,
+"volume": 9914990.0
+},
+"1": {
+"contracts": 72.0,
+"volume": 72205599.0
+},
+"2": {
+"contracts": 62.0,
+"volume": 121453998.0
+},
+"3": {
+"contracts": 18.0,
+"volume": 68617000.0
+},
+"4+": {
+"contracts": 16.0,
+"volume": 149157500.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-07-15",
+"condo_contracts": 80.0,
+"condo_volume": 234786885.0,
+"coop_contracts": 111.0,
+"coop_volume": 180494499.0,
+"th_contracts": 1.0,
+"th_volume": 3650000.0,
+"total_contracts": 192.0,
+"total_volume": 418931384.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 194.0,
+"mix": {
+"studio": {
+"contracts": 31.0,
+"volume": 17428950.0
+},
+"1": {
+"contracts": 74.0,
+"volume": 67771274.0
+},
+"2": {
+"contracts": 44.0,
+"volume": 89916210.0
+},
+"3": {
+"contracts": 27.0,
+"volume": 104174950.0
+},
+"4+": {
+"contracts": 18.0,
+"volume": 141388000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-07-22",
+"condo_contracts": 105.0,
+"condo_volume": 267000599.0,
+"coop_contracts": 86.0,
+"coop_volume": 117414000.0,
+"th_contracts": 2.0,
+"th_volume": 10920000.0,
+"total_contracts": 193.0,
+"total_volume": 395334599.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 198.0,
+"mix": {
+"studio": {
+"contracts": 21.0,
+"volume": 11364400.0
+},
+"1": {
+"contracts": 75.0,
+"volume": 83446700.0
+},
+"2": {
+"contracts": 56.0,
+"volume": 104869500.0
+},
+"3": {
+"contracts": 30.0,
+"volume": 128637999.0
+},
+"4+": {
+"contracts": 16.0,
+"volume": 77565000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-07-29",
+"condo_contracts": 97.0,
+"condo_volume": 190389012.0,
+"coop_contracts": 114.0,
+"coop_volume": 142896194.0,
+"th_contracts": 2.0,
+"th_volume": 16195000.0,
+"total_contracts": 213.0,
+"total_volume": 349480206.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 218.0,
+"mix": {
+"studio": {
+"contracts": 34.0,
+"volume": 19974400.0
+},
+"1": {
+"contracts": 87.0,
+"volume": 83070920.0
+},
+"2": {
+"contracts": 55.0,
+"volume": 99044000.0
+},
+"3": {
+"contracts": 32.0,
+"volume": 98364887.0
+},
+"4+": {
+"contracts": 10.0,
+"volume": 54704999.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-08-05",
+"condo_contracts": 80.0,
+"condo_volume": 224354800.0,
+"coop_contracts": 93.0,
+"coop_volume": 136253998.0,
+"th_contracts": 3.0,
+"th_volume": 18970000.0,
+"total_contracts": 176.0,
+"total_volume": 379578798.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 177.0,
+"mix": {
+"studio": {
+"contracts": 25.0,
+"volume": 13437000.0
+},
+"1": {
+"contracts": 57.0,
+"volume": 57922048.0
+},
+"2": {
+"contracts": 58.0,
+"volume": 118658750.0
+},
+"3": {
+"contracts": 25.0,
+"volume": 99122000.0
+},
+"4+": {
+"contracts": 12.0,
+"volume": 92034000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-08-12",
+"condo_contracts": 94.0,
+"condo_volume": 233499365.0,
+"coop_contracts": 87.0,
+"coop_volume": 97475900.0,
+"th_contracts": 0.0,
+"th_volume": null,
+"total_contracts": 181.0,
+"total_volume": 330975265.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 185.0,
+"mix": {
+"studio": {
+"contracts": 22.0,
+"volume": 9859500.0
+},
+"1": {
+"contracts": 73.0,
+"volume": 78823575.0
+},
+"2": {
+"contracts": 59.0,
+"volume": 122409000.0
+},
+"3": {
+"contracts": 23.0,
+"volume": 88331190.0
+},
+"4+": {
+"contracts": 8.0,
+"volume": 51319000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-08-19",
+"condo_contracts": 73.0,
+"condo_volume": 250319279.0,
+"coop_contracts": 87.0,
+"coop_volume": 166616150.0,
+"th_contracts": 0.0,
+"th_volume": null,
+"total_contracts": 160.0,
+"total_volume": 416935429.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 162.0,
+"mix": {
+"studio": {
+"contracts": 22.0,
+"volume": 13928380.0
+},
+"1": {
+"contracts": 65.0,
+"volume": 61814249.0
+},
+"2": {
+"contracts": 49.0,
+"volume": 104261800.0
+},
+"3": {
+"contracts": 18.0,
+"volume": 92605000.0
+},
+"4+": {
+"contracts": 8.0,
+"volume": 148030000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-08-26",
+"condo_contracts": 55.0,
+"condo_volume": 154133550.0,
+"coop_contracts": 77.0,
+"coop_volume": 104571494.0,
+"th_contracts": 1.0,
+"th_volume": 4950000.0,
+"total_contracts": 133.0,
+"total_volume": 263655044.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 134.0,
+"mix": {
+"studio": {
+"contracts": 22.0,
+"volume": 12704700.0
+},
+"1": {
+"contracts": 48.0,
+"volume": 41002350.0
+},
+"2": {
+"contracts": 38.0,
+"volume": 76649995.0
+},
+"3": {
+"contracts": 19.0,
+"volume": 91886999.0
+},
+"4+": {
+"contracts": 7.0,
+"volume": 42315000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-09-02",
+"condo_contracts": 75.0,
+"condo_volume": 221474928.0,
+"coop_contracts": 61.0,
+"coop_volume": 81182000.0,
+"th_contracts": 4.0,
+"th_volume": 45600000.0,
+"total_contracts": 140.0,
+"total_volume": 348256928.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 141.0,
+"mix": {
+"studio": {
+"contracts": 13.0,
+"volume": 8062000.0
+},
+"1": {
+"contracts": 45.0,
+"volume": 50099400.0
+},
+"2": {
+"contracts": 51.0,
+"volume": 107452528.0
+},
+"3": {
+"contracts": 20.0,
+"volume": 77518000.0
+},
+"4+": {
+"contracts": 12.0,
+"volume": 107720000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-09-09",
+"condo_contracts": 80.0,
+"condo_volume": 241857550.0,
+"coop_contracts": 77.0,
+"coop_volume": 99302750.0,
+"th_contracts": 4.0,
+"th_volume": 32285000.0,
+"total_contracts": 161.0,
+"total_volume": 373445300.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 161.0,
+"mix": {
+"studio": {
+"contracts": 22.0,
+"volume": 12116000.0
+},
+"1": {
+"contracts": 51.0,
+"volume": 46777600.0
+},
+"2": {
+"contracts": 55.0,
+"volume": 114409700.0
+},
+"3": {
+"contracts": 18.0,
+"volume": 93823000.0
+},
+"4+": {
+"contracts": 15.0,
+"volume": 106030000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-09-16",
+"condo_contracts": 76.0,
+"condo_volume": 253037913.0,
+"coop_contracts": 89.0,
+"coop_volume": 173182239.0,
+"th_contracts": 2.0,
+"th_volume": 12995000.0,
+"total_contracts": 167.0,
+"total_volume": 439215152.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 169.0,
+"mix": {
+"studio": {
+"contracts": 17.0,
+"volume": 10248995.0
+},
+"1": {
+"contracts": 60.0,
+"volume": 55708549.0
+},
+"2": {
+"contracts": 59.0,
+"volume": 122658608.0
+},
+"3": {
+"contracts": 24.0,
+"volume": 114603000.0
+},
+"4+": {
+"contracts": 9.0,
+"volume": 137790000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-09-23",
+"condo_contracts": 72.0,
+"condo_volume": 219427798.0,
+"coop_contracts": 92.0,
+"coop_volume": 108033998.0,
+"th_contracts": 2.0,
+"th_volume": 13000000.0,
+"total_contracts": 166.0,
+"total_volume": 340461796.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 168.0,
+"mix": {
+"studio": {
+"contracts": 22.0,
+"volume": 11063000.0
+},
+"1": {
+"contracts": 62.0,
+"volume": 57952998.0
+},
+"2": {
+"contracts": 49.0,
+"volume": 90940799.0
+},
+"3": {
+"contracts": 22.0,
+"volume": 73408999.0
+},
+"4+": {
+"contracts": 13.0,
+"volume": 110024000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-09-30",
+"condo_contracts": 95.0,
+"condo_volume": 279177936.0,
+"coop_contracts": 123.0,
+"coop_volume": 171443898.0,
+"th_contracts": 4.0,
+"th_volume": 14675000.0,
+"total_contracts": 222.0,
+"total_volume": 465296834.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 223.0,
+"mix": {
+"studio": {
+"contracts": 32.0,
+"volume": 17239899.0
+},
+"1": {
+"contracts": 82.0,
+"volume": 81898937.0
+},
+"2": {
+"contracts": 62.0,
+"volume": 113200999.0
+},
+"3": {
+"contracts": 26.0,
+"volume": 99651000.0
+},
+"4+": {
+"contracts": 21.0,
+"volume": 155355000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-10-07",
+"condo_contracts": 91.0,
+"condo_volume": 371744152.0,
+"coop_contracts": 111.0,
+"coop_volume": 161073999.0,
+"th_contracts": 4.0,
+"th_volume": 22899995.0,
+"total_contracts": 206.0,
+"total_volume": 555718146.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 210.0,
+"mix": {
+"studio": {
+"contracts": 24.0,
+"volume": 12700413.0
+},
+"1": {
+"contracts": 85.0,
+"volume": 93667488.0
+},
+"2": {
+"contracts": 61.0,
+"volume": 129026750.0
+},
+"3": {
+"contracts": 21.0,
+"volume": 113128500.0
+},
+"4+": {
+"contracts": 19.0,
+"volume": 213398995.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-10-14",
+"condo_contracts": 80.0,
+"condo_volume": 200036989.0,
+"coop_contracts": 97.0,
+"coop_volume": 127591249.0,
+"th_contracts": 0.0,
+"th_volume": 0.0,
+"total_contracts": 177.0,
+"total_volume": 327628238.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 180.0,
+"mix": {
+"studio": {
+"contracts": 28.0,
+"volume": 17230000.0
+},
+"1": {
+"contracts": 69.0,
+"volume": 67473249.0
+},
+"2": {
+"contracts": 53.0,
+"volume": 98356000.0
+},
+"3": {
+"contracts": 22.0,
+"volume": 98935989.0
+},
+"4+": {
+"contracts": 8.0,
+"volume": 47563000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-10-21",
+"condo_contracts": 109.0,
+"condo_volume": 319430899.0,
+"coop_contracts": 113.0,
+"coop_volume": 141398075.0,
+"th_contracts": 5.0,
+"th_volume": 28395000.0,
+"total_contracts": 227.0,
+"total_volume": 489223974.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 226.0,
+"mix": {
+"studio": {
+"contracts": 35.0,
+"volume": 22647900.0
+},
+"1": {
+"contracts": 65.0,
+"volume": 68000075.0
+},
+"2": {
+"contracts": 86.0,
+"volume": 173614000.0
+},
+"3": {
+"contracts": 29.0,
+"volume": 123702999.0
+},
+"4+": {
+"contracts": 11.0,
+"volume": 104430000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-10-28",
+"condo_contracts": 86.0,
+"condo_volume": 292349149.0,
+"coop_contracts": 104.0,
+"coop_volume": 143885498.0,
+"th_contracts": 3.0,
+"th_volume": 9290000.0,
+"total_contracts": 193.0,
+"total_volume": 445524647.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 195.0,
+"mix": {
+"studio": {
+"contracts": 19.0,
+"volume": 12486000.0
+},
+"1": {
+"contracts": 63.0,
+"volume": 54867848.0
+},
+"2": {
+"contracts": 63.0,
+"volume": 148701299.0
+},
+"3": {
+"contracts": 37.0,
+"volume": 128149500.0
+},
+"4+": {
+"contracts": 13.0,
+"volume": 104065000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-11-04",
+"condo_contracts": 87.0,
+"condo_volume": 258616149.0,
+"coop_contracts": 119.0,
+"coop_volume": 195743924.0,
+"th_contracts": 3.0,
+"th_volume": 19690000.0,
+"total_contracts": 209.0,
+"total_volume": 474050073.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 212.0,
+"mix": {
+"studio": {
+"contracts": 25.0,
+"volume": 13109923.0
+},
+"1": {
+"contracts": 71.0,
+"volume": 67388150.0
+},
+"2": {
+"contracts": 66.0,
+"volume": 160304000.0
+},
+"3": {
+"contracts": 32.0,
+"volume": 121978000.0
+},
+"4+": {
+"contracts": 18.0,
+"volume": 114194000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-11-11",
+"condo_contracts": 94.0,
+"condo_volume": 299354698.0,
+"coop_contracts": 100.0,
+"coop_volume": 176923249.0,
+"th_contracts": 3.0,
+"th_volume": 22695000.0,
+"total_contracts": 197.0,
+"total_volume": 498972947.0,
+"luxury_volume": 8582773989.0,
+"luxury_volume_share": 2024.0,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 200.0,
+"mix": {
+"studio": {
+"contracts": 26.0,
+"volume": 15914999.0
+},
+"1": {
+"contracts": 67.0,
+"volume": 63996200.0
+},
+"2": {
+"contracts": 56.0,
+"volume": 114490749.0
+},
+"3": {
+"contracts": 30.0,
+"volume": 128104999.0
+},
+"4+": {
+"contracts": 21.0,
+"volume": 179410000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-11-18",
+"condo_contracts": 98.0,
+"condo_volume": 343537297.0,
+"coop_contracts": 119.0,
+"coop_volume": 175354400.0,
+"th_contracts": 5.0,
+"th_volume": 50295000.0,
+"total_contracts": 222.0,
+"total_volume": 569186697.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 224.0,
+"mix": {
+"studio": {
+"contracts": 29.0,
+"volume": 16041100.0
+},
+"1": {
+"contracts": 69.0,
+"volume": 71085599.0
+},
+"2": {
+"contracts": 69.0,
+"volume": 144499998.0
+},
+"3": {
+"contracts": 33.0,
+"volume": 90411000.0
+},
+"4+": {
+"contracts": 24.0,
+"volume": 250694000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-11-25",
+"condo_contracts": 58.0,
+"condo_volume": 228041398.0,
+"coop_contracts": 84.0,
+"coop_volume": 125028000.0,
+"th_contracts": 0.0,
+"th_volume": 0.0,
+"total_contracts": 142.0,
+"total_volume": 353069398.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 143.0,
+"mix": {
+"studio": {
+"contracts": 17.0,
+"volume": 8510999.0
+},
+"1": {
+"contracts": 43.0,
+"volume": 47077000.0
+},
+"2": {
+"contracts": 43.0,
+"volume": 71923400.0
+},
+"3": {
+"contracts": 28.0,
+"volume": 109547999.0
+},
+"4+": {
+"contracts": 12.0,
+"volume": 122260000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-12-02",
+"condo_contracts": 94.0,
+"condo_volume": 309158145.0,
+"coop_contracts": 90.0,
+"coop_volume": 136408998.0,
+"th_contracts": 5.0,
+"th_volume": 29199000.0,
+"total_contracts": 189.0,
+"total_volume": 474766143.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 191.0,
+"mix": {
+"studio": {
+"contracts": 29.0,
+"volume": 14596245.0
+},
+"1": {
+"contracts": 62.0,
+"volume": 53832998.0
+},
+"2": {
+"contracts": 54.0,
+"volume": 101387500.0
+},
+"3": {
+"contracts": 27.0,
+"volume": 159795400.0
+},
+"4+": {
+"contracts": 19.0,
+"volume": 168879000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-12-09",
+"condo_contracts": 86.0,
+"condo_volume": 312964800.0,
+"coop_contracts": 102.0,
+"coop_volume": 172533999.0,
+"th_contracts": 2.0,
+"th_volume": 10450000.0,
+"total_contracts": 190.0,
+"total_volume": 495948799.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 193.0,
+"mix": {
+"studio": {
+"contracts": 16.0,
+"volume": 7522000.0
+},
+"1": {
+"contracts": 59.0,
+"volume": 59197800.0
+},
+"2": {
+"contracts": 61.0,
+"volume": 123542999.0
+},
+"3": {
+"contracts": 40.0,
+"volume": 169478000.0
+},
+"4+": {
+"contracts": 17.0,
+"volume": 138445000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-12-16",
+"condo_contracts": 89.0,
+"condo_volume": 287456989.0,
+"coop_contracts": 123.0,
+"coop_volume": 237924498.0,
+"th_contracts": 3.0,
+"th_volume": 13595000.0,
+"total_contracts": 215.0,
+"total_volume": 538976487.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 216.0,
+"mix": {
+"studio": {
+"contracts": 19.0,
+"volume": 10631000.0
+},
+"1": {
+"contracts": 72.0,
+"volume": 68701998.0
+},
+"2": {
+"contracts": 61.0,
+"volume": 111746499.0
+},
+"3": {
+"contracts": 39.0,
+"volume": 156802990.0
+},
+"4+": {
+"contracts": 25.0,
+"volume": 191593000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-12-23",
+"condo_contracts": 59.0,
+"condo_volume": 163996000.0,
+"coop_contracts": 53.0,
+"coop_volume": 71996494.0,
+"th_contracts": 6.0,
+"th_volume": 45644999.0,
+"total_contracts": 118.0,
+"total_volume": 281637493.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 119.0,
+"mix": {
+"studio": {
+"contracts": 13.0,
+"volume": 6771500.0
+},
+"1": {
+"contracts": 34.0,
+"volume": 34994000.0
+},
+"2": {
+"contracts": 35.0,
+"volume": 68507999.0
+},
+"3": {
+"contracts": 24.0,
+"volume": 82657995.0
+},
+"4+": {
+"contracts": 13.0,
+"volume": 89354999.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2024-12-30",
+"condo_contracts": 38.0,
+"condo_volume": 165745599.0,
+"coop_contracts": 53.0,
+"coop_volume": 90676180.0,
+"th_contracts": 3.0,
+"th_volume": 16690000.0,
+"total_contracts": 94.0,
+"total_volume": 273111779.0,
+"luxury_volume": 1791328922.0,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 96.0,
+"mix": {
+"studio": {
+"contracts": 12.0,
+"volume": 9480600.0
+},
+"1": {
+"contracts": 33.0,
+"volume": 31946679.0
+},
+"2": {
+"contracts": 26.0,
+"volume": 64504500.0
+},
+"3": {
+"contracts": 18.0,
+"volume": 88734000.0
+},
+"4+": {
+"contracts": 7.0,
+"volume": 81194000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-01-06",
+"condo_contracts": 72.0,
+"condo_volume": 254008889.0,
+"coop_contracts": 89.0,
+"coop_volume": 123303499.0,
+"th_contracts": 9.0,
+"th_volume": 72834999.0,
+"total_contracts": 170.0,
+"total_volume": 450147387.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 173.0,
+"mix": {
+"studio": {
+"contracts": 24.0,
+"volume": 14037999.0
+},
+"1": {
+"contracts": 52.0,
+"volume": 49453000.0
+},
+"2": {
+"contracts": 58.0,
+"volume": 110365000.0
+},
+"3": {
+"contracts": 22.0,
+"volume": 110768399.0
+},
+"4+": {
+"contracts": 17.0,
+"volume": 168275989.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-01-13",
+"condo_contracts": 79.0,
+"condo_volume": 224424600.0,
+"coop_contracts": 100.0,
+"coop_volume": 134258995.0,
+"th_contracts": 2.0,
+"th_volume": 10250000.0,
+"total_contracts": 181.0,
+"total_volume": 368933595.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 185.0,
+"mix": {
+"studio": {
+"contracts": 15.0,
+"volume": 9740000.0
+},
+"1": {
+"contracts": 76.0,
+"volume": 73891600.0
+},
+"2": {
+"contracts": 49.0,
+"volume": 84962995.0
+},
+"3": {
+"contracts": 32.0,
+"volume": 113754000.0
+},
+"4+": {
+"contracts": 13.0,
+"volume": 90165000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-01-20",
+"condo_contracts": 53.0,
+"condo_volume": 173230399.0,
+"coop_contracts": 74.0,
+"coop_volume": 119426000.0,
+"th_contracts": 4.0,
+"th_volume": 18349999.0,
+"total_contracts": 131.0,
+"total_volume": 311006398.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 132.0,
+"mix": {
+"studio": {
+"contracts": 14.0,
+"volume": 7094000.0
+},
+"1": {
+"contracts": 51.0,
+"volume": 45953399.0
+},
+"2": {
+"contracts": 37.0,
+"volume": 64873000.0
+},
+"3": {
+"contracts": 17.0,
+"volume": 83485000.0
+},
+"4+": {
+"contracts": 13.0,
+"volume": 110549999.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-01-27",
+"condo_contracts": 56.0,
+"condo_volume": 162192700.0,
+"coop_contracts": 98.0,
+"coop_volume": 173000499.0,
+"th_contracts": 0.0,
+"th_volume": null,
+"total_contracts": 154.0,
+"total_volume": 335193199.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 158.0,
+"mix": {
+"studio": {
+"contracts": 18.0,
+"volume": 9188000.0
+},
+"1": {
+"contracts": 49.0,
+"volume": 48443000.0
+},
+"2": {
+"contracts": 62.0,
+"volume": 136353200.0
+},
+"3": {
+"contracts": 19.0,
+"volume": 69298999.0
+},
+"4+": {
+"contracts": 10.0,
+"volume": 77475000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-02-03",
+"condo_contracts": 85.0,
+"condo_volume": 379155388.0,
+"coop_contracts": 129.0,
+"coop_volume": 330357999.0,
+"th_contracts": 0.0,
+"th_volume": null,
+"total_contracts": 214.0,
+"total_volume": 709513387.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 217.0,
+"mix": {
+"studio": {
+"contracts": 29.0,
+"volume": 15104000.0
+},
+"1": {
+"contracts": 63.0,
+"volume": 57767499.0
+},
+"2": {
+"contracts": 67.0,
+"volume": 263811888.0
+},
+"3": {
+"contracts": 35.0,
+"volume": 152236000.0
+},
+"4+": {
+"contracts": 23.0,
+"volume": 223514000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-02-10",
+"condo_contracts": 73.0,
+"condo_volume": 223566400.0,
+"coop_contracts": 109.0,
+"coop_volume": 247320387.0,
+"th_contracts": 5.0,
+"th_volume": 30385000.0,
+"total_contracts": 187.0,
+"total_volume": 501271787.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 192.0,
+"mix": {
+"studio": {
+"contracts": 14.0,
+"volume": 6927000.0
+},
+"1": {
+"contracts": 65.0,
+"volume": 61425000.0
+},
+"2": {
+"contracts": 59.0,
+"volume": 115639287.0
+},
+"3": {
+"contracts": 30.0,
+"volume": 128610500.0
+},
+"4+": {
+"contracts": 24.0,
+"volume": 194519000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-02-17",
+"condo_contracts": 90.0,
+"condo_volume": 325843488.0,
+"coop_contracts": 86.0,
+"coop_volume": 91444000.0,
+"th_contracts": 5.0,
+"th_volume": 68894999.0,
+"total_contracts": 181.0,
+"total_volume": 486182487.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 183.0,
+"mix": {
+"studio": {
+"contracts": 24.0,
+"volume": 14695500.0
+},
+"1": {
+"contracts": 60.0,
+"volume": 59521000.0
+},
+"2": {
+"contracts": 60.0,
+"volume": 113519988.0
+},
+"3": {
+"contracts": 22.0,
+"volume": 87955000.0
+},
+"4+": {
+"contracts": 17.0,
+"volume": 212314999.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-02-24",
+"condo_contracts": 75.0,
+"condo_volume": 227720500.0,
+"coop_contracts": 141.0,
+"coop_volume": 196993000.0,
+"th_contracts": 4.0,
+"th_volume": 44250000.0,
+"total_contracts": 220.0,
+"total_volume": 468963500.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 226.0,
+"mix": {
+"studio": {
+"contracts": 29.0,
+"volume": 16093500.0
+},
+"1": {
+"contracts": 91.0,
+"volume": 84984500.0
+},
+"2": {
+"contracts": 57.0,
+"volume": 122815500.0
+},
+"3": {
+"contracts": 26.0,
+"volume": 78967000.0
+},
+"4+": {
+"contracts": 23.0,
+"volume": 172303000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-03-03",
+"condo_contracts": 106.0,
+"condo_volume": 308240037.0,
+"coop_contracts": 105.0,
+"coop_volume": 148229998.0,
+"th_contracts": 5.0,
+"th_volume": 35140000.0,
+"total_contracts": 216.0,
+"total_volume": 491610035.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 223.0,
+"mix": {
+"studio": {
+"contracts": 27.0,
+"volume": 15083099.0
+},
+"1": {
+"contracts": 84.0,
+"volume": 83356947.0
+},
+"2": {
+"contracts": 55.0,
+"volume": 123532000.0
+},
+"3": {
+"contracts": 38.0,
+"volume": 145619518.0
+},
+"4+": {
+"contracts": 19.0,
+"volume": 130749999.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-03-10",
+"condo_contracts": 121.0,
+"condo_volume": 443142490.0,
+"coop_contracts": 125.0,
+"coop_volume": 229526090.0,
+"th_contracts": 2.0,
+"th_volume": 18445000.0,
+"total_contracts": 248.0,
+"total_volume": 691113580.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 253.0,
+"mix": {
+"studio": {
+"contracts": 24.0,
+"volume": 14054900.0
+},
+"1": {
+"contracts": 86.0,
+"volume": 86502790.0
+},
+"2": {
+"contracts": 72.0,
+"volume": 141422900.0
+},
+"3": {
+"contracts": 50.0,
+"volume": 226686990.0
+},
+"4+": {
+"contracts": 21.0,
+"volume": 227215000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-03-17",
+"condo_contracts": 104.0,
+"condo_volume": 333039749.0,
+"coop_contracts": 143.0,
+"coop_volume": 162113493.0,
+"th_contracts": 3.0,
+"th_volume": 18975000.0,
+"total_contracts": 250.0,
+"total_volume": 514128242.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 255.0,
+"mix": {
+"studio": {
+"contracts": 34.0,
+"volume": 19330999.0
+},
+"1": {
+"contracts": 101.0,
+"volume": 98286045.0
+},
+"2": {
+"contracts": 68.0,
+"volume": 133276199.0
+},
+"3": {
+"contracts": 31.0,
+"volume": 98594000.0
+},
+"4+": {
+"contracts": 21.0,
+"volume": 169738999.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-03-24",
+"condo_contracts": 114.0,
+"condo_volume": 455282500.0,
+"coop_contracts": 135.0,
+"coop_volume": 204336799.0,
+"th_contracts": 1.0,
+"th_volume": 1700000.0,
+"total_contracts": 250.0,
+"total_volume": 661319299.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 254.0,
+"mix": {
+"studio": {
+"contracts": 31.0,
+"volume": 17281000.0
+},
+"1": {
+"contracts": 83.0,
+"volume": 81146499.0
+},
+"2": {
+"contracts": 73.0,
+"volume": 140617800.0
+},
+"3": {
+"contracts": 40.0,
+"volume": 150234000.0
+},
+"4+": {
+"contracts": 27.0,
+"volume": 275528000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-03-31",
+"condo_contracts": 114.0,
+"condo_volume": 224081399.0,
+"coop_contracts": 155.0,
+"coop_volume": 212013999.0,
+"th_contracts": 5.0,
+"th_volume": 43125000.0,
+"total_contracts": 274.0,
+"total_volume": 479220398.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 277.0,
+"mix": {
+"studio": {
+"contracts": 36.0,
+"volume": 21231200.0
+},
+"1": {
+"contracts": 117.0,
+"volume": 114001998.0
+},
+"2": {
+"contracts": 77.0,
+"volume": 133135200.0
+},
+"3": {
+"contracts": 33.0,
+"volume": 102261000.0
+},
+"4+": {
+"contracts": 14.0,
+"volume": 112485000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-04-07",
+"condo_contracts": 89.0,
+"condo_volume": 266310000.0,
+"coop_contracts": 116.0,
+"coop_volume": 159229499.0,
+"th_contracts": 2.0,
+"th_volume": 7340000.0,
+"total_contracts": 207.0,
+"total_volume": 432879499.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 208.0,
+"mix": {
+"studio": {
+"contracts": 30.0,
+"volume": 17802500.0
+},
+"1": {
+"contracts": 66.0,
+"volume": 61673999.0
+},
+"2": {
+"contracts": 62.0,
+"volume": 133058000.0
+},
+"3": {
+"contracts": 35.0,
+"volume": 142870000.0
+},
+"4+": {
+"contracts": 15.0,
+"volume": 77584000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-04-14",
+"condo_contracts": 83.0,
+"condo_volume": 220364000.0,
+"coop_contracts": 104.0,
+"coop_volume": 151869998.0,
+"th_contracts": 2.0,
+"th_volume": 22975000.0,
+"total_contracts": 189.0,
+"total_volume": 395208998.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 190.0,
+"mix": {
+"studio": {
+"contracts": 27.0,
+"volume": 14817999.0
+},
+"1": {
+"contracts": 64.0,
+"volume": 64005000.0
+},
+"2": {
+"contracts": 59.0,
+"volume": 106371999.0
+},
+"3": {
+"contracts": 30.0,
+"volume": 129099000.0
+},
+"4+": {
+"contracts": 10.0,
+"volume": 82415000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-04-21",
+"condo_contracts": 124.0,
+"condo_volume": 350523500.0,
+"coop_contracts": 135.0,
+"coop_volume": 225708998.0,
+"th_contracts": 4.0,
+"th_volume": 38240000.0,
+"total_contracts": 263.0,
+"total_volume": 614472498.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 268.0,
+"mix": {
+"studio": {
+"contracts": 21.0,
+"volume": 11908800.0
+},
+"1": {
+"contracts": 86.0,
+"volume": 87643698.0
+},
+"2": {
+"contracts": 98.0,
+"volume": 198982000.0
+},
+"3": {
+"contracts": 32.0,
+"volume": 113499000.0
+},
+"4+": {
+"contracts": 31.0,
+"volume": 207359000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-04-28",
+"condo_contracts": 108.0,
+"condo_volume": 318031899.0,
+"coop_contracts": 131.0,
+"coop_volume": 183438950.0,
+"th_contracts": 11.0,
+"th_volume": 66944999.0,
+"total_contracts": 250.0,
+"total_volume": 568415848.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 254.0,
+"mix": {
+"studio": {
+"contracts": 30.0,
+"volume": 17430450.0
+},
+"1": {
+"contracts": 95.0,
+"volume": 97022899.0
+},
+"2": {
+"contracts": 65.0,
+"volume": 118687000.0
+},
+"3": {
+"contracts": 41.0,
+"volume": 164148500.0
+},
+"4+": {
+"contracts": 23.0,
+"volume": 177579999.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-05-05",
+"condo_contracts": 91.0,
+"condo_volume": 280984998.0,
+"coop_contracts": 130.0,
+"coop_volume": 249005740.0,
+"th_contracts": 4.0,
+"th_volume": 24645000.0,
+"total_contracts": 225.0,
+"total_volume": 554635738.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 230.0,
+"mix": {
+"studio": {
+"contracts": 30.0,
+"volume": 15781995.0
+},
+"1": {
+"contracts": 58.0,
+"volume": 51298749.0
+},
+"2": {
+"contracts": 79.0,
+"volume": 160300995.0
+},
+"3": {
+"contracts": 38.0,
+"volume": 129913000.0
+},
+"4+": {
+"contracts": 25.0,
+"volume": 206909999.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-05-12",
+"condo_contracts": 78.0,
+"condo_volume": 195549749.0,
+"coop_contracts": 147.0,
+"coop_volume": 284652000.0,
+"th_contracts": 6.0,
+"th_volume": 39345000.0,
+"total_contracts": 231.0,
+"total_volume": 519546749.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 236.0,
+"mix": {
+"studio": {
+"contracts": 26.0,
+"volume": 13949000.0
+},
+"1": {
+"contracts": 71.0,
+"volume": 66053749.0
+},
+"2": {
+"contracts": 76.0,
+"volume": 141605999.0
+},
+"3": {
+"contracts": 36.0,
+"volume": 132514000.0
+},
+"4+": {
+"contracts": 27.0,
+"volume": 177919000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-05-19",
+"condo_contracts": 108.0,
+"condo_volume": 353278500.0,
+"coop_contracts": 140.0,
+"coop_volume": 233119500.0,
+"th_contracts": 4.0,
+"th_volume": 28789000.0,
+"total_contracts": 252.0,
+"total_volume": 615187000.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 254.0,
+"mix": {
+"studio": {
+"contracts": 29.0,
+"volume": 15253500.0
+},
+"1": {
+"contracts": 86.0,
+"volume": 80135500.0
+},
+"2": {
+"contracts": 69.0,
+"volume": 139886000.0
+},
+"3": {
+"contracts": 44.0,
+"volume": 199674000.0
+},
+"4+": {
+"contracts": 26.0,
+"volume": 176933000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-05-26",
+"condo_contracts": 83.0,
+"condo_volume": 249933576.0,
+"coop_contracts": 96.0,
+"coop_volume": 147145500.0,
+"th_contracts": 5.0,
+"th_volume": 31444999.0,
+"total_contracts": 184.0,
+"total_volume": 428524075.0,
+"luxury_volume": null,
+"luxury_volume_share": null,
+"luxury_contracts": null,
+"bedroom": {
+"total_sales": 191.0,
+"mix": {
+"studio": {
+"contracts": 16.0,
+"volume": 8300000.0
+},
+"1": {
+"contracts": 57.0,
+"volume": 55900000.0
+},
+"2": {
+"contracts": 69.0,
+"volume": 121800000.0
+},
+"3": {
+"contracts": 29.0,
+"volume": 130100000.0
+},
+"4+": {
+"contracts": 20.0,
+"volume": 124600000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-06-02",
+"condo_contracts": 89.0,
+"condo_volume": 271650300.0,
+"coop_contracts": 110.0,
+"coop_volume": 195039998.0,
+"th_contracts": 3.0,
+"th_volume": 26390000.0,
+"total_contracts": 202.0,
+"total_volume": 493080298.0,
+"luxury_volume": 229454000.0,
+"luxury_volume_share": 0.4653481409,
+"luxury_contracts": 25.0,
+"bedroom": {
+"total_sales": 207.0,
+"mix": {
+"studio": {
+"contracts": 23.0,
+"volume": 14700000.0
+},
+"1": {
+"contracts": 56.0,
+"volume": 55900000.0
+},
+"2": {
+"contracts": 68.0,
+"volume": 121600000.0
+},
+"3": {
+"contracts": 38.0,
+"volume": 126100000.0
+},
+"4+": {
+"contracts": 22.0,
+"volume": 182800000.0
+}
+}
+},
+"price_points": null
+},
+{
+"week_start": "2025-06-09",
+"condo_contracts": 99.0,
+"condo_volume": 319239999.0,
+"coop_contracts": 112.0,
+"coop_volume": 222830899.0,
+"th_contracts": 13.0,
+"th_volume": 114590000.0,
+"total_contracts": 224.0,
+"total_volume": 656660898.0,
+"luxury_volume": 351720000.0,
+"luxury_volume_share": 0.5356189185,
+"luxury_contracts": 36.0,
+"bedroom": {
+"total_sales": 229.0,
+"mix": {
+"studio": {
+"contracts": 23.0,
+"volume": 13600000.0
+},
+"1": {
+"contracts": 71.0,
+"volume": 74100000.0
+},
+"2": {
+"contracts": 70.0,
+"volume": 154000000.0
+},
+"3": {
+"contracts": 38.0,
+"volume": 174500000.0
+},
+"4+": {
+"contracts": 27.0,
+"volume": 246300000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 163.0,
+"volume": 113000000.0
+},
+"$1M - $3M": {
+"contracts": 193.0,
+"volume": 345000000.0
+},
+"$3M - $5M": {
+"contracts": 34.0,
+"volume": 130000000.0
+},
+"$5M - $10M": {
+"contracts": 27.0,
+"volume": 176000000.0
+},
+"$10M+": {
+"contracts": 12.0,
+"volume": 195000000.0
+}
+}
+},
+{
+"week_start": "2025-06-16",
+"condo_contracts": 90.0,
+"condo_volume": 262157025.0,
+"coop_contracts": 114.0,
+"coop_volume": 173100899.0,
+"th_contracts": 6.0,
+"th_volume": 77190000.0,
+"total_contracts": 210.0,
+"total_volume": 512447924.0,
+"luxury_volume": 248868000.0,
+"luxury_volume_share": 0.4856454448,
+"luxury_contracts": 21.0,
+"bedroom": {
+"total_sales": 215.0,
+"mix": {
+"studio": {
+"contracts": 20.0,
+"volume": 10900000.0
+},
+"1": {
+"contracts": 71.0,
+"volume": 67500000.0
+},
+"2": {
+"contracts": 78.0,
+"volume": 160400000.0
+},
+"3": {
+"contracts": 31.0,
+"volume": 127600000.0
+},
+"4+": {
+"contracts": 15.0,
+"volume": 157100000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 130.0,
+"volume": 86000000.0
+},
+"$1M - $3M": {
+"contracts": 131.0,
+"volume": 230000000.0
+},
+"$3M - $5M": {
+"contracts": 31.0,
+"volume": 117000000.0
+},
+"$5M - $10M": {
+"contracts": 12.0,
+"volume": 80000000.0
+},
+"$10M+": {
+"contracts": 9.0,
+"volume": 160000000.0
+}
+}
+},
+{
+"week_start": "2025-06-23",
+"condo_contracts": 87.0,
+"condo_volume": 259492700.0,
+"coop_contracts": 136.0,
+"coop_volume": 182028499.0,
+"th_contracts": 6.0,
+"th_volume": 55340000.0,
+"total_contracts": 229.0,
+"total_volume": 496861199.0,
+"luxury_volume": 213244000.0,
+"luxury_volume_share": 0.4291822353,
+"luxury_contracts": 24.0,
+"bedroom": {
+"total_sales": 232.0,
+"mix": {
+"studio": {
+"contracts": 30.0,
+"volume": 14300000.0
+},
+"1": {
+"contracts": 83.0,
+"volume": 81000000.0
+},
+"2": {
+"contracts": 76.0,
+"volume": 155800000.0
+},
+"3": {
+"contracts": 24.0,
+"volume": 91500000.0
+},
+"4+": {
+"contracts": 19.0,
+"volume": 158100000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 159.0,
+"volume": 101000000.0
+},
+"$1M - $3M": {
+"contracts": 138.0,
+"volume": 255000000.0
+},
+"$3M - $5M": {
+"contracts": 15.0,
+"volume": 60000000.0
+},
+"$5M - $10M": {
+"contracts": 22.0,
+"volume": 154000000.0
+},
+"$10M+": {
+"contracts": 5.0,
+"volume": 81000000.0
+}
+}
+},
+{
+"week_start": "2025-06-30",
+"condo_contracts": 77.0,
+"condo_volume": 245999990.0,
+"coop_contracts": 85.0,
+"coop_volume": 121181499.0,
+"th_contracts": 2.0,
+"th_volume": 12949000.0,
+"total_contracts": 164.0,
+"total_volume": 380130489.0,
+"luxury_volume": 154669990.0,
+"luxury_volume_share": 0.4068865678,
+"luxury_contracts": 13.0,
+"bedroom": {
+"total_sales": 167.0,
+"mix": {
+"studio": {
+"contracts": 29.0,
+"volume": 17700000.0
+},
+"1": {
+"contracts": 51.0,
+"volume": 57000000.0
+},
+"2": {
+"contracts": 50.0,
+"volume": 92600000.0
+},
+"3": {
+"contracts": 25.0,
+"volume": 110700000.0
+},
+"4+": {
+"contracts": 12.0,
+"volume": 108400000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 120.0,
+"volume": 73000000.0
+},
+"$1M - $3M": {
+"contracts": 120.0,
+"volume": 208000000.0
+},
+"$3M - $5M": {
+"contracts": 20.0,
+"volume": 77000000.0
+},
+"$5M - $10M": {
+"contracts": 9.0,
+"volume": 63000000.0
+},
+"$10M+": {
+"contracts": 5.0,
+"volume": 99000000.0
+}
+}
+},
+{
+"week_start": "2025-07-07",
+"condo_contracts": 95.0,
+"condo_volume": 228498987.0,
+"coop_contracts": 117.0,
+"coop_volume": 172669399.0,
+"th_contracts": 0.0,
+"th_volume": null,
+"total_contracts": 212.0,
+"total_volume": 401168386.0,
+"luxury_volume": 125004999.0,
+"luxury_volume_share": 0.311602318,
+"luxury_contracts": 12.0,
+"bedroom": {
+"total_sales": 217.0,
+"mix": {
+"studio": {
+"contracts": 38.0,
+"volume": 19700000.0
+},
+"1": {
+"contracts": 84.0,
+"volume": 83500000.0
+},
+"2": {
+"contracts": 55.0,
+"volume": 105500000.0
+},
+"3": {
+"contracts": 31.0,
+"volume": 151600000.0
+},
+"4+": {
+"contracts": 9.0,
+"volume": 46500000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 102.0,
+"volume": 63000000.0
+},
+"$1M - $3M": {
+"contracts": 88.0,
+"volume": 154000000.0
+},
+"$3M - $5M": {
+"contracts": 16.0,
+"volume": 65000000.0
+},
+"$5M - $10M": {
+"contracts": 9.0,
+"volume": 63000000.0
+},
+"$10M+": {
+"contracts": 3.0,
+"volume": 61000000.0
+}
+}
+},
+{
+"week_start": "2025-07-14",
+"condo_contracts": 88.0,
+"condo_volume": 230902123.0,
+"coop_contracts": 100.0,
+"coop_volume": 133327790.0,
+"th_contracts": 0.0,
+"th_volume": null,
+"total_contracts": 188.0,
+"total_volume": 364229913.0,
+"luxury_volume": 162654000.0,
+"luxury_volume_share": 0.446569582,
+"luxury_contracts": 18.0,
+"bedroom": {
+"total_sales": 197.0,
+"mix": {
+"studio": {
+"contracts": 41.0,
+"volume": 25000000.0
+},
+"1": {
+"contracts": 63.0,
+"volume": 52000000.0
+},
+"2": {
+"contracts": 53.0,
+"volume": 124000000.0
+},
+"3": {
+"contracts": 26.0,
+"volume": 93000000.0
+},
+"4+": {
+"contracts": 14.0,
+"volume": 96000000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 98.0,
+"volume": 63000000.0
+},
+"$1M - $3M": {
+"contracts": 70.0,
+"volume": 135000000.0
+},
+"$3M - $5M": {
+"contracts": 15.0,
+"volume": 59000000.0
+},
+"$5M - $10M": {
+"contracts": 10.0,
+"volume": 71000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 62000000.0
+}
+}
+},
+{
+"week_start": "2025-07-21",
+"condo_contracts": 98.0,
+"condo_volume": 228105667.0,
+"coop_contracts": 101.0,
+"coop_volume": 126016999.0,
+"th_contracts": 3.0,
+"th_volume": 29159000.0,
+"total_contracts": 202.0,
+"total_volume": 383281666.0,
+"luxury_volume": 147984000.0,
+"luxury_volume_share": 0.3860972573,
+"luxury_contracts": 18.0,
+"bedroom": {
+"total_sales": 202.0,
+"mix": {
+"studio": {
+"contracts": 31.0,
+"volume": 19900000.0
+},
+"1": {
+"contracts": 75.0,
+"volume": 68000000.0
+},
+"2": {
+"contracts": 51.0,
+"volume": 103000000.0
+},
+"3": {
+"contracts": 34.0,
+"volume": 130400000.0
+},
+"4+": {
+"contracts": 11.0,
+"volume": 62700000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 94.0,
+"volume": 63000000.0
+},
+"$1M - $3M": {
+"contracts": 80.0,
+"volume": 142000000.0
+},
+"$3M - $5M": {
+"contracts": 14.0,
+"volume": 58000000.0
+},
+"$5M - $10M": {
+"contracts": 13.0,
+"volume": 82000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 57000000.0
+}
+}
+},
+{
+"week_start": "2025-07-28",
+"condo_contracts": 72.0,
+"condo_volume": 169592895.0,
+"coop_contracts": 103.0,
+"coop_volume": 110002482.0,
+"th_contracts": 4.0,
+"th_volume": 35635000.0,
+"total_contracts": 179.0,
+"total_volume": 315230377.0,
+"luxury_volume": 80295000.0,
+"luxury_volume_share": 0.2547184721,
+"luxury_contracts": 9.0,
+"bedroom": {
+"total_sales": 180.0,
+"mix": {
+"studio": {
+"contracts": 18.0,
+"volume": 9800000.0
+},
+"1": {
+"contracts": 67.0,
+"volume": 70700000.0
+},
+"2": {
+"contracts": 63.0,
+"volume": 108300000.0
+},
+"3": {
+"contracts": 23.0,
+"volume": 69700000.0
+},
+"4+": {
+"contracts": 9.0,
+"volume": 57800000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 82.0,
+"volume": 52000000.0
+},
+"$1M - $3M": {
+"contracts": 75.0,
+"volume": 134000000.0
+},
+"$3M - $5M": {
+"contracts": 15.0,
+"volume": 56000000.0
+},
+"$5M - $10M": {
+"contracts": 6.0,
+"volume": 44000000.0
+},
+"$10M+": {
+"contracts": 2.0,
+"volume": 33000000.0
+}
+}
+},
+{
+"week_start": "2025-08-04",
+"condo_contracts": 90.0,
+"condo_volume": 338935999.0,
+"coop_contracts": 102.0,
+"coop_volume": 140981618.0,
+"th_contracts": 4.0,
+"th_volume": 33444000.0,
+"total_contracts": 196.0,
+"total_volume": 513361617.0,
+"luxury_volume": 298165000.0,
+"luxury_volume_share": 0.5808089077,
+"luxury_contracts": 19.0,
+"bedroom": {
+"total_sales": 206.0,
+"mix": {
+"studio": {
+"contracts": 22.0,
+"volume": 10800000.0
+},
+"1": {
+"contracts": 74.0,
+"volume": 69300000.0
+},
+"2": {
+"contracts": 64.0,
+"volume": 130800000.0
+},
+"3": {
+"contracts": 32.0,
+"volume": 98200000.0
+},
+"4+": {
+"contracts": 13.0,
+"volume": 212700000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 83.0,
+"volume": 53000000.0
+},
+"$1M - $3M": {
+"contracts": 92.0,
+"volume": 171000000.0
+},
+"$3M - $5M": {
+"contracts": 14.0,
+"volume": 54000000.0
+},
+"$5M - $10M": {
+"contracts": 11.0,
+"volume": 71000000.0
+},
+"$10M+": {
+"contracts": 6.0,
+"volume": 177000000.0
+}
+}
+},
+{
+"week_start": "2025-08-11",
+"condo_contracts": 87.0,
+"condo_volume": 228918000.0,
+"coop_contracts": 95.0,
+"coop_volume": 120484699.0,
+"th_contracts": 4.0,
+"th_volume": 52444900.0,
+"total_contracts": 186.0,
+"total_volume": 401847599.0,
+"luxury_volume": 103845000.0,
+"luxury_volume_share": 0.2584188639,
+"luxury_contracts": 13.0,
+"bedroom": {
+"total_sales": 191.0,
+"mix": {
+"studio": {
+"contracts": 31.0,
+"volume": 17500000.0
+},
+"1": {
+"contracts": 64.0,
+"volume": 57000000.0
+},
+"2": {
+"contracts": 52.0,
+"volume": 106900000.0
+},
+"3": {
+"contracts": 26.0,
+"volume": 82300000.0
+},
+"4+": {
+"contracts": 18.0,
+"volume": 142000000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 86.0,
+"volume": 54000000.0
+},
+"$1M - $3M": {
+"contracts": 70.0,
+"volume": 124000000.0
+},
+"$3M - $5M": {
+"contracts": 25.0,
+"volume": 100000000.0
+},
+"$5M - $10M": {
+"contracts": 11.0,
+"volume": 75000000.0
+},
+"$10M+": {
+"contracts": 3.0,
+"volume": 77000000.0
+}
+}
+},
+{
+"week_start": "2025-08-18",
+"condo_contracts": 68.0,
+"condo_volume": 167930000.0,
+"coop_contracts": 101.0,
+"coop_volume": 133992350.0,
+"th_contracts": 5.0,
+"th_volume": 28500000.0,
+"total_contracts": 174.0,
+"total_volume": 330422350.0,
+"luxury_volume": 140665000.0,
+"luxury_volume_share": 0.425712728,
+"luxury_contracts": 17.0,
+"bedroom": {
+"total_sales": 178.0,
+"mix": {
+"studio": {
+"contracts": 22.0,
+"volume": 13600000.0
+},
+"1": {
+"contracts": 58.0,
+"volume": 53700000.0
+},
+"2": {
+"contracts": 55.0,
+"volume": 101300000.0
+},
+"3": {
+"contracts": 26.0,
+"volume": 80100000.0
+},
+"4+": {
+"contracts": 17.0,
+"volume": 96400000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 73.0,
+"volume": 48000000.0
+},
+"$1M - $3M": {
+"contracts": 73.0,
+"volume": 125000000.0
+},
+"$3M - $5M": {
+"contracts": 23.0,
+"volume": 87000000.0
+},
+"$5M - $10M": {
+"contracts": 9.0,
+"volume": 56000000.0
+},
+"$10M+": {
+"contracts": 3.0,
+"volume": 36000000.0
+}
+}
+},
+{
+"week_start": "2025-08-25",
+"condo_contracts": 55.0,
+"condo_volume": 161205291.0,
+"coop_contracts": 76.0,
+"coop_volume": 99607997.0,
+"th_contracts": 2.0,
+"th_volume": 22850000.0,
+"total_contracts": 133.0,
+"total_volume": 286600000.0,
+"luxury_volume": 111740000.0,
+"luxury_volume_share": 0.3939177353,
+"luxury_contracts": 13.0,
+"bedroom": {
+"total_sales": 138.0,
+"mix": {
+"studio": {
+"contracts": 21.0,
+"volume": 10400000.0
+},
+"1": {
+"contracts": 44.0,
+"volume": 42900000.0
+},
+"2": {
+"contracts": 47.0,
+"volume": 107300000.0
+},
+"3": {
+"contracts": 20.0,
+"volume": 69600000.0
+},
+"4+": {
+"contracts": 6.0,
+"volume": 56300000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 61.0,
+"volume": 42000000.0
+},
+"$1M - $3M": {
+"contracts": 52.0,
+"volume": 90000000.0
+},
+"$3M - $5M": {
+"contracts": 19.0,
+"volume": 71000000.0
+},
+"$5M - $10M": {
+"contracts": 7.0,
+"volume": 44000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 56000000.0
+}
+}
+},
+{
+"week_start": "2025-09-01",
+"condo_contracts": 66.0,
+"condo_volume": 193199500.0,
+"coop_contracts": 80.0,
+"coop_volume": 112374995.0,
+"th_contracts": 0.0,
+"th_volume": null,
+"total_contracts": 146.0,
+"total_volume": 316500000.0,
+"luxury_volume": 122045000.0,
+"luxury_volume_share": 0.399395244,
+"luxury_contracts": 13.0,
+"bedroom": {
+"total_sales": 149.0,
+"mix": {
+"studio": {
+"contracts": 25.0,
+"volume": 12400000.0
+},
+"1": {
+"contracts": 48.0,
+"volume": 53600000.0
+},
+"2": {
+"contracts": 52.0,
+"volume": 100200000.0
+},
+"3": {
+"contracts": 14.0,
+"volume": 71100000.0
+},
+"4+": {
+"contracts": 10.0,
+"volume": 76500000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 55.0,
+"volume": 32000000.0
+},
+"$1M - $3M": {
+"contracts": 68.0,
+"volume": 115000000.0
+},
+"$3M - $5M": {
+"contracts": 15.0,
+"volume": 58000000.0
+},
+"$5M - $10M": {
+"contracts": 7.0,
+"volume": 49000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 60000000.0
+}
+}
+},
+{
+"week_start": "2025-09-08",
+"condo_contracts": 56.0,
+"condo_volume": 139410500.0,
+"coop_contracts": 73.0,
+"coop_volume": 113026000.0,
+"th_contracts": 1.0,
+"th_volume": 2990000.0,
+"total_contracts": 136.0,
+"total_volume": 259400000.0,
+"luxury_volume": 69770000.0,
+"luxury_volume_share": 0.2731509847,
+"luxury_contracts": 10.0,
+"bedroom": {
+"total_sales": 136.0,
+"mix": {
+"studio": {
+"contracts": 22.0,
+"volume": 11400000.0
+},
+"1": {
+"contracts": 49.0,
+"volume": 54900000.0
+},
+"2": {
+"contracts": 32.0,
+"volume": 64200000.0
+},
+"3": {
+"contracts": 28.0,
+"volume": 108400000.0
+},
+"4+": {
+"contracts": 5.0,
+"volume": 20400000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 61.0,
+"volume": 38000000.0
+},
+"$1M - $3M": {
+"contracts": 54.0,
+"volume": 102000000.0
+},
+"$3M - $5M": {
+"contracts": 11.0,
+"volume": 41000000.0
+},
+"$5M - $10M": {
+"contracts": 11.0,
+"volume": 73000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 60000000.0
+}
+}
+},
+{
+"week_start": "2025-09-15",
+"condo_contracts": 76.0,
+"condo_volume": 192229999.0,
+"coop_contracts": 107.0,
+"coop_volume": 139124451.0,
+"th_contracts": 1.0,
+"th_volume": 4995000.0,
+"total_contracts": 186.0,
+"total_volume": 338800000.0,
+"luxury_volume": 120488000.0,
+"luxury_volume_share": 0.3582226759,
+"luxury_contracts": 16.0,
+"bedroom": {
+"total_sales": 186.0,
+"mix": {
+"studio": {
+"contracts": 21.0,
+"volume": 11500000.0
+},
+"1": {
+"contracts": 77.0,
+"volume": 74000000.0
+},
+"2": {
+"contracts": 57.0,
+"volume": 122500000.0
+},
+"3": {
+"contracts": 18.0,
+"volume": 50900000.0
+},
+"4+": {
+"contracts": 13.0,
+"volume": 79800000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 87.0,
+"volume": 56000000.0
+},
+"$1M - $3M": {
+"contracts": 73.0,
+"volume": 130000000.0
+},
+"$3M - $5M": {
+"contracts": 13.0,
+"volume": 54000000.0
+},
+"$5M - $10M": {
+"contracts": 12.0,
+"volume": 80000000.0
+},
+"$10M+": {
+"contracts": 1.0,
+"volume": 23000000.0
+}
+}
+},
+{
+"week_start": "2025-09-22",
+"condo_contracts": 81.0,
+"condo_volume": 249848999.0,
+"coop_contracts": 79.0,
+"coop_volume": 113282899.0,
+"th_contracts": 2.0,
+"th_volume": 10600000.0,
+"total_contracts": 164.0,
+"total_volume": 378400000.0,
+"luxury_volume": 152400000.0,
+"luxury_volume_share": 0.4077789475,
+"luxury_contracts": 16.0,
+"bedroom": {
+"total_sales": 164.0,
+"mix": {
+"studio": {
+"contracts": 20.0,
+"volume": 12500000.0
+},
+"1": {
+"contracts": 58.0,
+"volume": 58500000.0
+},
+"2": {
+"contracts": 53.0,
+"volume": 111400000.0
+},
+"3": {
+"contracts": 22.0,
+"volume": 121200000.0
+},
+"4+": {
+"contracts": 11.0,
+"volume": 74800000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 66.0,
+"volume": 43000000.0
+},
+"$1M - $3M": {
+"contracts": 71.0,
+"volume": 133000000.0
+},
+"$3M - $5M": {
+"contracts": 14.0,
+"volume": 54000000.0
+},
+"$5M - $10M": {
+"contracts": 11.0,
+"volume": 86000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 62000000.0
+}
+}
+},
+{
+"week_start": "2025-09-29",
+"condo_contracts": 99.0,
+"condo_volume": 308724506.0,
+"coop_contracts": 102.0,
+"coop_volume": 166060398.0,
+"th_contracts": 3.0,
+"th_volume": 32300000.0,
+"total_contracts": 210.0,
+"total_volume": 516600000.0,
+"luxury_volume": 261655000.0,
+"luxury_volume_share": 0.5159984017,
+"luxury_contracts": 23.0,
+"bedroom": {
+"total_sales": 210.0,
+"mix": {
+"studio": {
+"contracts": 24.0,
+"volume": 14800000.0
+},
+"1": {
+"contracts": 69.0,
+"volume": 69800000.0
+},
+"2": {
+"contracts": 72.0,
+"volume": 130400000.0
+},
+"3": {
+"contracts": 30.0,
+"volume": 117600000.0
+},
+"4+": {
+"contracts": 15.0,
+"volume": 184000000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 75.0,
+"volume": 49000000.0
+},
+"$1M - $3M": {
+"contracts": 102.0,
+"volume": 178000000.0
+},
+"$3M - $5M": {
+"contracts": 21.0,
+"volume": 86000000.0
+},
+"$5M - $10M": {
+"contracts": 9.0,
+"volume": 61000000.0
+},
+"$10M+": {
+"contracts": 6.0,
+"volume": 148000000.0
+}
+}
+},
+{
+"week_start": "2025-10-06",
+"condo_contracts": 73.0,
+"condo_volume": 314219506.0,
+"coop_contracts": 84.0,
+"coop_volume": 164865398.0,
+"th_contracts": 3.0,
+"th_volume": 32300000.0,
+"total_contracts": 165.0,
+"total_volume": 394500000.0,
+"luxury_volume": 216695000.0,
+"luxury_volume_share": 0.4237414877,
+"luxury_contracts": 23.0,
+"bedroom": {
+"total_sales": 165.0,
+"mix": {
+"studio": {
+"contracts": 25.0,
+"volume": 12800000.0
+},
+"1": {
+"contracts": 56.0,
+"volume": 55500000.0
+},
+"2": {
+"contracts": 43.0,
+"volume": 96400000.0
+},
+"3": {
+"contracts": 30.0,
+"volume": 140200000.0
+},
+"4+": {
+"contracts": 11.0,
+"volume": 89500000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 72.0,
+"volume": 48000000.0
+},
+"$1M - $3M": {
+"contracts": 61.0,
+"volume": 109000000.0
+},
+"$3M - $5M": {
+"contracts": 15.0,
+"volume": 59000000.0
+},
+"$5M - $10M": {
+"contracts": 18.0,
+"volume": 130000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 67000000.0
+}
+}
+},
+{
+"week_start": "2025-10-13",
+"condo_contracts": 87.0,
+"condo_volume": 203065999.0,
+"coop_contracts": 93.0,
+"coop_volume": 175698994.0,
+"th_contracts": 3.0,
+"th_volume": 16695000.0,
+"total_contracts": 186.0,
+"total_volume": 401800000.0,
+"luxury_volume": 213875000.0,
+"luxury_volume_share": 0.5408258832,
+"luxury_contracts": 23.0,
+"bedroom": {
+"total_sales": 186.0,
+"mix": {
+"studio": {
+"contracts": 26.0,
+"volume": 16100000.0
+},
+"1": {
+"contracts": 53.0,
+"volume": 53300000.0
+},
+"2": {
+"contracts": 65.0,
+"volume": 129600000.0
+},
+"3": {
+"contracts": 29.0,
+"volume": 103900000.0
+},
+"4+": {
+"contracts": 13.0,
+"volume": 98900000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 67.0,
+"volume": 46000000.0
+},
+"$1M - $3M": {
+"contracts": 84.0,
+"volume": 150000000.0
+},
+"$3M - $5M": {
+"contracts": 19.0,
+"volume": 74000000.0
+},
+"$5M - $10M": {
+"contracts": 12.0,
+"volume": 86000000.0
+},
+"$10M+": {
+"contracts": 3.0,
+"volume": 54000000.0
+}
+}
+},
+{
+"week_start": "2025-10-20",
+"condo_contracts": 128.0,
+"condo_volume": 463686649.0,
+"coop_contracts": 125.0,
+"coop_volume": 165495999.0,
+"th_contracts": 3.0,
+"th_volume": 28045000.0,
+"total_contracts": 261.0,
+"total_volume": 680700000.0,
+"luxury_volume": 322922649.0,
+"luxury_volume_share": 0.4913406336,
+"luxury_contracts": 25.0,
+"bedroom": {
+"total_sales": 261.0,
+"mix": {
+"studio": {
+"contracts": 31.0,
+"volume": 17300000.0
+},
+"1": {
+"contracts": 92.0,
+"volume": 90700000.0
+},
+"2": {
+"contracts": 82.0,
+"volume": 159100000.0
+},
+"3": {
+"contracts": 37.0,
+"volume": 188900000.0
+},
+"4+": {
+"contracts": 19.0,
+"volume": 224600000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 114.0,
+"volume": 76000000.0
+},
+"$1M - $3M": {
+"contracts": 94.0,
+"volume": 170000000.0
+},
+"$3M - $5M": {
+"contracts": 30.0,
+"volume": null
+},
+"$5M - $10M": {
+"contracts": 14.0,
+"volume": 103000000.0
+},
+"$10M+": {
+"contracts": 10.0,
+"volume": 220000000.0
+}
+}
+},
+{
+"week_start": "2025-10-27",
+"condo_contracts": 110.0,
+"condo_volume": 303374495.0,
+"coop_contracts": 115.0,
+"coop_volume": 188857999.0,
+"th_contracts": 6.0,
+"th_volume": 110940000.0,
+"total_contracts": 235.0,
+"total_volume": 612100000.0,
+"luxury_volume": 301075000.0,
+"luxury_volume_share": 0.4991524033,
+"luxury_contracts": 25.0,
+"bedroom": {
+"total_sales": 235.0,
+"mix": {
+"studio": {
+"contracts": 22.0,
+"volume": 14400000.0
+},
+"1": {
+"contracts": 77.0,
+"volume": 74500000.0
+},
+"2": {
+"contracts": 77.0,
+"volume": 160400000.0
+},
+"3": {
+"contracts": 40.0,
+"volume": 189100000.0
+},
+"4+": {
+"contracts": 19.0,
+"volume": 173700000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 92.0,
+"volume": 62000000.0
+},
+"$1M - $3M": {
+"contracts": 94.0,
+"volume": 176000000.0
+},
+"$3M - $5M": {
+"contracts": 30.0,
+"volume": 117000000.0
+},
+"$5M - $10M": {
+"contracts": 13.0,
+"volume": 89000000.0
+},
+"$10M+": {
+"contracts": 8.0,
+"volume": 165000000.0
+}
+}
+},
+{
+"week_start": "2025-11-03",
+"condo_contracts": 86.0,
+"condo_volume": 290194199.0,
+"coop_contracts": 109.0,
+"coop_volume": 174066499.0,
+"th_contracts": 6.0,
+"th_volume": 70340000.0,
+"total_contracts": 206.0,
+"total_volume": 518500000.0,
+"luxury_volume": 244730000.0,
+"luxury_volume_share": 0.4577809212,
+"luxury_contracts": 27.0,
+"bedroom": {
+"total_sales": 206.0,
+"mix": {
+"studio": {
+"contracts": 19.0,
+"volume": 9900000.0
+},
+"1": {
+"contracts": 72.0,
+"volume": 61100000.0
+},
+"2": {
+"contracts": 61.0,
+"volume": 124500000.0
+},
+"3": {
+"contracts": 35.0,
+"volume": 154500000.0
+},
+"4+": {
+"contracts": 19.0,
+"volume": 168500000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 83.0,
+"volume": 53000000.0
+},
+"$1M - $3M": {
+"contracts": 71.0,
+"volume": 126000000.0
+},
+"$3M - $5M": {
+"contracts": 26.0,
+"volume": 102000000.0
+},
+"$5M - $10M": {
+"contracts": 16.0,
+"volume": 104000000.0
+},
+"$10M+": {
+"contracts": 9.0,
+"volume": 141000000.0
+}
+}
+},
+{
+"week_start": "2025-11-10",
+"condo_contracts": 93.0,
+"condo_volume": 295750700.0,
+"coop_contracts": 93.0,
+"coop_volume": 125527000.0,
+"th_contracts": 2.0,
+"th_volume": 10999000.0,
+"total_contracts": 193.0,
+"total_volume": 448500000.0,
+"luxury_volume": 166168000.0,
+"luxury_volume_share": 0.3844019351,
+"luxury_contracts": 18.0,
+"bedroom": {
+"total_sales": 193.0,
+"mix": {
+"studio": {
+"contracts": 23.0,
+"volume": 13400000.0
+},
+"1": {
+"contracts": 64.0,
+"volume": 63700000.0
+},
+"2": {
+"contracts": 57.0,
+"volume": 118700000.0
+},
+"3": {
+"contracts": 39.0,
+"volume": 171100000.0
+},
+"4+": {
+"contracts": 10.0,
+"volume": 81500000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 73.0,
+"volume": 48000000.0
+},
+"$1M - $3M": {
+"contracts": 82.0,
+"volume": 152000000.0
+},
+"$3M - $5M": {
+"contracts": 21.0,
+"volume": 85000000.0
+},
+"$5M - $10M": {
+"contracts": 14.0,
+"volume": 95000000.0
+},
+"$10M+": {
+"contracts": 5.0,
+"volume": 75000000.0
+}
+}
+},
+{
+"week_start": "2025-11-17",
+"condo_contracts": 69.0,
+"condo_volume": 266740000.0,
+"coop_contracts": 107.0,
+"coop_volume": 133691144.0,
+"th_contracts": 4.0,
+"th_volume": 14589000.0,
+"total_contracts": 184.0,
+"total_volume": 418100000.0,
+"luxury_volume": 185314000.0,
+"luxury_volume_share": 0.4465180852,
+"luxury_contracts": 16.0,
+"bedroom": {
+"total_sales": 184.0,
+"mix": {
+"studio": {
+"contracts": 23.0,
+"volume": 12200000.0
+},
+"1": {
+"contracts": 69.0,
+"volume": 64700000.0
+},
+"2": {
+"contracts": 55.0,
+"volume": 94200000.0
+},
+"3": {
+"contracts": 24.0,
+"volume": 102200000.0
+},
+"4+": {
+"contracts": 13.0,
+"volume": 144800000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 92.0,
+"volume": 61000000.0
+},
+"$1M - $3M": {
+"contracts": 59.0,
+"volume": 103000000.0
+},
+"$3M - $5M": {
+"contracts": 21.0,
+"volume": 84000000.0
+},
+"$5M - $10M": {
+"contracts": 10.0,
+"volume": 70000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 104000000.0
+}
+}
+},
+{
+"week_start": "2025-11-24",
+"condo_contracts": 52.0,
+"condo_volume": 135439700.0,
+"coop_contracts": 71.0,
+"coop_volume": 146572000.0,
+"th_contracts": 3.0,
+"th_volume": 28990000.0,
+"total_contracts": 126.0,
+"total_volume": 311000000.0,
+"luxury_volume": 147290000.0,
+"luxury_volume_share": 0.4735986974,
+"luxury_contracts": 13.0,
+"bedroom": {
+"total_sales": 126.0,
+"mix": {
+"studio": {
+"contracts": 13.0,
+"volume": 6400000.0
+},
+"1": {
+"contracts": 43.0,
+"volume": 46300000.0
+},
+"2": {
+"contracts": 43.0,
+"volume": 90500000.0
+},
+"3": {
+"contracts": 18.0,
+"volume": 81000000.0
+},
+"4+": {
+"contracts": 9.0,
+"volume": 86800000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 47.0,
+"volume": 32000000.0
+},
+"$1M - $3M": {
+"contracts": 51.0,
+"volume": 95000000.0
+},
+"$3M - $5M": {
+"contracts": 16.0,
+"volume": 64000000.0
+},
+"$5M - $10M": {
+"contracts": 5.0,
+"volume": 38000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 75000000.0
+}
+}
+},
+{
+"week_start": "2025-12-01",
+"condo_contracts": 66.0,
+"condo_volume": 197465000.0,
+"coop_contracts": 71.0,
+"coop_volume": 95618371.0,
+"th_contracts": 4.0,
+"th_volume": 21740000.0,
+"total_contracts": 142.0,
+"total_volume": 315900000.0,
+"luxury_volume": 204604000.0,
+"luxury_volume_share": 0.6499009249,
+"luxury_contracts": 23.0,
+"bedroom": {
+"total_sales": 142.0,
+"mix": {
+"studio": {
+"contracts": 17.0,
+"volume": 8300000.0
+},
+"1": {
+"contracts": 37.0,
+"volume": 38200000.0
+},
+"2": {
+"contracts": 54.0,
+"volume": 109000000.0
+},
+"3": {
+"contracts": 20.0,
+"volume": 86400000.0
+},
+"4+": {
+"contracts": 14.0,
+"volume": 74000000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 53.0,
+"volume": 34000000.0
+},
+"$1M - $3M": {
+"contracts": 69.0,
+"volume": 130000000.0
+},
+"$3M - $5M": {
+"contracts": 8.0,
+"volume": 33000000.0
+},
+"$5M - $10M": {
+"contracts": 11.0,
+"volume": 73000000.0
+},
+"$10M+": {
+"contracts": 3.0,
+"volume": 52000000.0
+}
+}
+},
+{
+"week_start": "2025-12-08",
+"condo_contracts": 98.0,
+"condo_volume": 320153875.0,
+"coop_contracts": 108.0,
+"coop_volume": 121684500.0,
+"th_contracts": 1.0,
+"th_volume": 10999000.0,
+"total_contracts": 179.0,
+"total_volume": 472300000.0,
+"luxury_volume": 240880000.0,
+"luxury_volume_share": 0.5319348916,
+"luxury_contracts": 25.0,
+"bedroom": {
+"total_sales": 179.0,
+"mix": {
+"studio": {
+"contracts": 19.0,
+"volume": 12600000.0
+},
+"1": {
+"contracts": 49.0,
+"volume": 46000000.0
+},
+"2": {
+"contracts": 59.0,
+"volume": 123300000.0
+},
+"3": {
+"contracts": 35.0,
+"volume": 156600000.0
+},
+"4+": {
+"contracts": 17.0,
+"volume": 134900000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 64.0,
+"volume": 43000000.0
+},
+"$1M - $3M": {
+"contracts": 70.0,
+"volume": 135000000.0
+},
+"$3M - $5M": {
+"contracts": 22.0,
+"volume": 84000000.0
+},
+"$5M - $10M": {
+"contracts": 13.0,
+"volume": 83000000.0
+},
+"$10M+": {
+"contracts": 7.0,
+"volume": 126000000.0
+}
+}
+},
+{
+"week_start": "2025-12-15",
+"condo_contracts": 71.0,
+"condo_volume": 206349490.0,
+"coop_contracts": 134.0,
+"coop_volume": 202415999.0,
+"th_contracts": 3.0,
+"th_volume": 13095000.0,
+"total_contracts": 203.0,
+"total_volume": 421860489.0,
+"luxury_volume": 89269990.0,
+"luxury_volume_share": 0.2116102179,
+"luxury_contracts": 11.0,
+"bedroom": {
+"total_sales": 203.0,
+"mix": {
+"studio": {
+"contracts": 18.0,
+"volume": 8700000.0
+},
+"1": {
+"contracts": 67.0,
+"volume": 62100000.0
+},
+"2": {
+"contracts": 65.0,
+"volume": 113700000.0
+},
+"3": {
+"contracts": 37.0,
+"volume": 114100000.0
+},
+"4+": {
+"contracts": 16.0,
+"volume": 112200000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 83.0,
+"volume": 53000000.0
+},
+"$1M - $3M": {
+"contracts": 82.0,
+"volume": 151000000.0
+},
+"$3M - $5M": {
+"contracts": 26.0,
+"volume": 100000000.0
+},
+"$5M - $10M": {
+"contracts": 12.0,
+"volume": 90000000.0
+},
+"$10M+": {
+"contracts": 1.0,
+"volume": 16000000.0
+}
+}
+},
+{
+"week_start": "2025-12-22",
+"condo_contracts": 44.0,
+"condo_volume": 125582000.0,
+"coop_contracts": 62.0,
+"coop_volume": 77476000.0,
+"th_contracts": 1.0,
+"th_volume": 1790000.0,
+"total_contracts": 106.0,
+"total_volume": 210400000.0,
+"luxury_volume": 43825000.0,
+"luxury_volume_share": 0.2139391158,
+"luxury_contracts": 7.0,
+"bedroom": {
+"total_sales": 106.0,
+"mix": {
+"studio": {
+"contracts": 18.0,
+"volume": 9900000.0
+},
+"1": {
+"contracts": 32.0,
+"volume": 33400000.0
+},
+"2": {
+"contracts": 37.0,
+"volume": 84700000.0
+},
+"3": {
+"contracts": 10.0,
+"volume": 35700000.0
+},
+"4+": {
+"contracts": 9.0,
+"volume": 46800000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 45.0,
+"volume": 30000000.0
+},
+"$1M - $3M": {
+"contracts": 40.0,
+"volume": 72000000.0
+},
+"$3M - $5M": {
+"contracts": 13.0,
+"volume": 50000000.0
+},
+"$5M - $10M": {
+"contracts": 7.0,
+"volume": 44000000.0
+},
+"$10M+": {
+"contracts": 1.0,
+"volume": 14000000.0
+}
+}
+},
+{
+"week_start": "2025-12-29",
+"condo_contracts": 36.0,
+"condo_volume": 113775998.0,
+"coop_contracts": 45.0,
+"coop_volume": 58206859.0,
+"th_contracts": 3.0,
+"th_volume": 16390000.0,
+"total_contracts": 81.0,
+"total_volume": 189800000.0,
+"luxury_volume": 94690000.0,
+"luxury_volume_share": 0.50267327,
+"luxury_contracts": 9.0,
+"bedroom": {
+"total_sales": 81.0,
+"mix": {
+"studio": {
+"contracts": 12.0,
+"volume": 6100000.0
+},
+"1": {
+"contracts": 23.0,
+"volume": 21300000.0
+},
+"2": {
+"contracts": 25.0,
+"volume": 70600000.0
+},
+"3": {
+"contracts": 14.0,
+"volume": 53500000.0
+},
+"4+": {
+"contracts": 7.0,
+"volume": 38300000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 36.0,
+"volume": 24000000.0
+},
+"$1M - $3M": {
+"contracts": 24.0,
+"volume": 47000000.0
+},
+"$3M - $5M": {
+"contracts": 10.0,
+"volume": 39000000.0
+},
+"$5M - $10M": {
+"contracts": 8.0,
+"volume": 55000000.0
+},
+"$10M+": {
+"contracts": 1.0,
+"volume": 22000000.0
+}
+}
+},
+{
+"week_start": "2026-01-05",
+"condo_contracts": 69.0,
+"condo_volume": 183048500.0,
+"coop_contracts": 76.0,
+"coop_volume": 100685000.0,
+"th_contracts": 1.0,
+"th_volume": 6500000.0,
+"total_contracts": 142.0,
+"total_volume": 295100000.0,
+"luxury_volume": 110528000.0,
+"luxury_volume_share": 0.3808244052,
+"luxury_contracts": 13.0,
+"bedroom": {
+"total_sales": 142.0,
+"mix": {
+"studio": {
+"contracts": 14.0,
+"volume": 7100000.0
+},
+"1": {
+"contracts": 51.0,
+"volume": 51500000.0
+},
+"2": {
+"contracts": 50.0,
+"volume": 102000000.0
+},
+"3": {
+"contracts": 17.0,
+"volume": 74700000.0
+},
+"4+": {
+"contracts": 10.0,
+"volume": 59600000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 56.0,
+"volume": 37000000.0
+},
+"$1M - $3M": {
+"contracts": 64.0,
+"volume": 108000000.0
+},
+"$3M - $5M": {
+"contracts": 12.0,
+"volume": 47000000.0
+},
+"$5M - $10M": {
+"contracts": 8.0,
+"volume": 56000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 52000000.0
+}
+}
+},
+{
+"week_start": "2026-01-12",
+"condo_contracts": 69.0,
+"condo_volume": 180452887.0,
+"coop_contracts": 84.0,
+"coop_volume": 166599350.0,
+"th_contracts": 5.0,
+"th_volume": 29340000.0,
+"total_contracts": 151.0,
+"total_volume": 376000000.0,
+"luxury_volume": 168745000.0,
+"luxury_volume_share": 0.4483222113,
+"luxury_contracts": 15.0,
+"bedroom": {
+"total_sales": 151.0,
+"mix": {
+"studio": {
+"contracts": 9.0,
+"volume": 3900000.0
+},
+"1": {
+"contracts": 48.0,
+"volume": 43500000.0
+},
+"2": {
+"contracts": 52.0,
+"volume": 101600000.0
+},
+"3": {
+"contracts": 27.0,
+"volume": 98000000.0
+},
+"4+": {
+"contracts": 15.0,
+"volume": 128900000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 58.0,
+"volume": 41000000.0
+},
+"$1M - $3M": {
+"contracts": 64.0,
+"volume": 114000000.0
+},
+"$3M - $5M": {
+"contracts": 16.0,
+"volume": 61000000.0
+},
+"$5M - $10M": {
+"contracts": 9.0,
+"volume": 69000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 88000000.0
+}
+}
+},
+{
+"week_start": "2026-01-19",
+"condo_contracts": 59.0,
+"condo_volume": 187030387.0,
+"coop_contracts": 74.0,
+"coop_volume": 128574500.0,
+"th_contracts": 4.0,
+"th_volume": 32465000.0,
+"total_contracts": 135.0,
+"total_volume": 341400000.0,
+"luxury_volume": 177800000.0,
+"luxury_volume_share": 0.5108169556,
+"luxury_contracts": 20.0,
+"bedroom": {
+"total_sales": 135.0,
+"mix": {
+"studio": {
+"contracts": 15.0,
+"volume": 7800000.0
+},
+"1": {
+"contracts": 43.0,
+"volume": 37300000.0
+},
+"2": {
+"contracts": 43.0,
+"volume": 89000000.0
+},
+"3": {
+"contracts": 16.0,
+"volume": 72000000.0
+},
+"4+": {
+"contracts": 18.0,
+"volume": 135300000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 53.0,
+"volume": 34000000.0
+},
+"$1M - $3M": {
+"contracts": 46.0,
+"volume": 78000000.0
+},
+"$3M - $5M": {
+"contracts": 16.0,
+"volume": 58000000.0
+},
+"$5M - $10M": {
+"contracts": 11.0,
+"volume": 70000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 51000000.0
+}
+}
+},
+{
+"week_start": "2026-01-26",
+"condo_contracts": 83.0,
+"condo_volume": 372826249.0,
+"coop_contracts": 61.0,
+"coop_volume": 102277900.0,
+"th_contracts": 7.0,
+"th_volume": 38520000.0,
+"total_contracts": 153.0,
+"total_volume": 491200000.0,
+"luxury_volume": 268140000.0,
+"luxury_volume_share": 0.5220548927,
+"luxury_contracts": 24.0,
+"bedroom": {
+"total_sales": 153.0,
+"mix": {
+"studio": {
+"contracts": 19.0,
+"volume": 11400000.0
+},
+"1": {
+"contracts": 36.0,
+"volume": 34600000.0
+},
+"2": {
+"contracts": 51.0,
+"volume": 121200000.0
+},
+"3": {
+"contracts": 24.0,
+"volume": 94400000.0
+},
+"4+": {
+"contracts": 23.0,
+"volume": 229600000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 49.0,
+"volume": 31000000.0
+},
+"$1M - $3M": {
+"contracts": 57.0,
+"volume": 110000000.0
+},
+"$3M - $5M": {
+"contracts": 24.0,
+"volume": 90000000.0
+},
+"$5M - $10M": {
+"contracts": 16.0,
+"volume": 120000000.0
+},
+"$10M+": {
+"contracts": 12.0,
+"volume": 194000000.0
+}
+}
+},
+{
+"week_start": "2026-02-02",
+"condo_contracts": 70.0,
+"condo_volume": 343554998.0,
+"coop_contracts": 75.0,
+"coop_volume": 116475300.0,
+"th_contracts": 5.0,
+"th_volume": 34085000.0,
+"total_contracts": 148.0,
+"total_volume": 496700000.0,
+"luxury_volume": 346584000.0,
+"luxury_volume_share": 0.7014233346,
+"luxury_contracts": 29.0,
+"bedroom": {
+"total_sales": 148.0,
+"mix": {
+"studio": {
+"contracts": 14.0,
+"volume": 7600000.0
+},
+"1": {
+"contracts": 40.0,
+"volume": 39200000.0
+},
+"2": {
+"contracts": 48.0,
+"volume": 103000000.0
+},
+"3": {
+"contracts": 24.0,
+"volume": 93700000.0
+},
+"4+": {
+"contracts": 22.0,
+"volume": 253200000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 48.0,
+"volume": 33000000.0
+},
+"$1M - $3M": {
+"contracts": 63.0,
+"volume": 120000000.0
+},
+"$3M - $5M": {
+"contracts": 15.0,
+"volume": 59000000.0
+},
+"$5M - $10M": {
+"contracts": 10.0,
+"volume": 66000000.0
+},
+"$10M+": {
+"contracts": 9.0,
+"volume": 182000000.0
+}
+}
+},
+{
+"week_start": "2026-02-09",
+"condo_contracts": 92.0,
+"condo_volume": 485461000.0,
+"coop_contracts": 113.0,
+"coop_volume": 167730999.0,
+"th_contracts": 5.0,
+"th_volume": 34263040.0,
+"total_contracts": 209.0,
+"total_volume": 692600000.0,
+"luxury_volume": 317679999.0,
+"luxury_volume_share": 0.4621102195,
+"luxury_contracts": 24.0,
+"bedroom": {
+"total_sales": 209.0,
+"mix": {
+"studio": {
+"contracts": 21.0,
+"volume": 12400000.0
+},
+"1": {
+"contracts": 61.0,
+"volume": 60000000.0
+},
+"2": {
+"contracts": 65.0,
+"volume": 136100000.0
+},
+"3": {
+"contracts": 38.0,
+"volume": 127500000.0
+},
+"4+": {
+"contracts": 24.0,
+"volume": 356900000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 74.0,
+"volume": 52000000.0
+},
+"$1M - $3M": {
+"contracts": 88.0,
+"volume": 161000000.0
+},
+"$3M - $5M": {
+"contracts": 20.0,
+"volume": 78000000.0
+},
+"$5M - $10M": {
+"contracts": 16.0,
+"volume": 112000000.0
+},
+"$10M+": {
+"contracts": 13.0,
+"volume": 324000000.0
+}
+}
+},
+{
+"week_start": "2026-02-16",
+"condo_contracts": 71.0,
+"condo_volume": 320916998.0,
+"coop_contracts": 98.0,
+"coop_volume": 132393000.0,
+"th_contracts": 9.0,
+"th_volume": 118240000.0,
+"total_contracts": 176.0,
+"total_volume": 578700000.0,
+"luxury_volume": 259410000.0,
+"luxury_volume_share": 0.453871054,
+"luxury_contracts": 18.0,
+"bedroom": {
+"total_sales": 176.0,
+"mix": {
+"studio": {
+"contracts": 18.0,
+"volume": 11100000.0
+},
+"1": {
+"contracts": 46.0,
+"volume": 37500000.0
+},
+"2": {
+"contracts": 65.0,
+"volume": 125300000.0
+},
+"3": {
+"contracts": 25.0,
+"volume": 99400000.0
+},
+"4+": {
+"contracts": 22.0,
+"volume": 305400000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 69.0,
+"volume": 46000000.0
+},
+"$1M - $3M": {
+"contracts": 74.0,
+"volume": 144000000.0
+},
+"$3M - $5M": {
+"contracts": 11.0,
+"volume": 39000000.0
+},
+"$5M - $10M": {
+"contracts": 12.0,
+"volume": 85000000.0
+},
+"$10M+": {
+"contracts": 10.0,
+"volume": 263000000.0
+}
+}
+},
+{
+"week_start": "2026-02-23",
+"condo_contracts": 105.0,
+"condo_volume": 355232989.0,
+"coop_contracts": 120.0,
+"coop_volume": 211057998.0,
+"th_contracts": 6.0,
+"th_volume": 85000000.0,
+"total_contracts": 232.0,
+"total_volume": 659700000.0,
+"luxury_volume": 329185990.0,
+"luxury_volume_share": 0.5759530945,
+"luxury_contracts": 29.0,
+"bedroom": {
+"total_sales": 232.0,
+"mix": {
+"studio": {
+"contracts": 17.0,
+"volume": 9900000.0
+},
+"1": {
+"contracts": 68.0,
+"volume": 62200000.0
+},
+"2": {
+"contracts": 79.0,
+"volume": 191900000.0
+},
+"3": {
+"contracts": 49.0,
+"volume": 189600000.0
+},
+"4+": {
+"contracts": 19.0,
+"volume": 206100000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 77.0,
+"volume": 51000000.0
+},
+"$1M - $3M": {
+"contracts": 95.0,
+"volume": 175000000.0
+},
+"$3M - $5M": {
+"contracts": 25.0,
+"volume": 95000000.0
+},
+"$5M - $10M": {
+"contracts": 27.0,
+"volume": 191000000.0
+},
+"$10M+": {
+"contracts": 8.0,
+"volume": 150000000.0
+}
+}
+},
+{
+"week_start": "2026-03-02",
+"condo_contracts": 102.0,
+"condo_volume": 402054474.0,
+"coop_contracts": 104.0,
+"coop_volume": 193940500.0,
+"th_contracts": 2.0,
+"th_volume": 32400000.0,
+"total_contracts": 207.0,
+"total_volume": 627600000.0,
+"luxury_volume": 380724000.0,
+"luxury_volume_share": 0.6661254507,
+"luxury_contracts": 34.0,
+"bedroom": {
+"total_sales": 207.0,
+"mix": {
+"studio": {
+"contracts": 16.0,
+"volume": 11200000.0
+},
+"1": {
+"contracts": 73.0,
+"volume": 79100000.0
+},
+"2": {
+"contracts": 60.0,
+"volume": 117400000.0
+},
+"3": {
+"contracts": 36.0,
+"volume": 143300000.0
+},
+"4+": {
+"contracts": 22.0,
+"volume": 276600000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 78.0,
+"volume": 53000000.0
+},
+"$1M - $3M": {
+"contracts": 78.0,
+"volume": 141000000.0
+},
+"$3M - $5M": {
+"contracts": 22.0,
+"volume": 85000000.0
+},
+"$5M - $10M": {
+"contracts": 21.0,
+"volume": 134000000.0
+},
+"$10M+": {
+"contracts": 10.0,
+"volume": 203000000.0
+}
+}
+},
+{
+"week_start": "2026-03-09",
+"condo_contracts": 99.0,
+"condo_volume": 262555500.0,
+"coop_contracts": 106.0,
+"coop_volume": 160814400.0,
+"th_contracts": 3.0,
+"th_volume": 12590000.0,
+"total_contracts": 208.0,
+"total_volume": 446400000.0,
+"luxury_volume": 151280000.0,
+"luxury_volume_share": 0.2646837556,
+"luxury_contracts": 17.0,
+"bedroom": {
+"total_sales": 208.0,
+"mix": {
+"studio": {
+"contracts": 20.0,
+"volume": 12000000.0
+},
+"1": {
+"contracts": 75.0,
+"volume": 72700000.0
+},
+"2": {
+"contracts": 53.0,
+"volume": 102300000.0
+},
+"3": {
+"contracts": 43.0,
+"volume": 137400000.0
+},
+"4+": {
+"contracts": 17.0,
+"volume": 122000000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 78.0,
+"volume": 52000000.0
+},
+"$1M - $3M": {
+"contracts": 90.0,
+"volume": 164000000.0
+},
+"$3M - $5M": {
+"contracts": 22.0,
+"volume": 88000000.0
+},
+"$5M - $10M": {
+"contracts": 13.0,
+"volume": 84000000.0
+},
+"$10M+": {
+"contracts": 5.0,
+"volume": 75000000.0
+}
+}
+},
+{
+"week_start": "2026-03-16",
+"condo_contracts": 85.0,
+"condo_volume": 303710000.0,
+"coop_contracts": 117.0,
+"coop_volume": 172309000.0,
+"th_contracts": 3.0,
+"th_volume": 15905000.0,
+"total_contracts": 207.0,
+"total_volume": 492500000.0,
+"luxury_volume": 203515000.0,
+"luxury_volume_share": 0.4132284264,
+"luxury_contracts": 21.0,
+"bedroom": {
+"total_sales": 207.0,
+"mix": {
+"studio": {
+"contracts": 16.0,
+"volume": 7800000.0
+},
+"1": {
+"contracts": 67.0,
+"volume": 57100000.0
+},
+"2": {
+"contracts": 71.0,
+"volume": 134600000.0
+},
+"3": {
+"contracts": 30.0,
+"volume": 120200000.0
+},
+"4+": {
+"contracts": 23.0,
+"volume": 172800000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 92.0,
+"volume": 63000000.0
+},
+"$1M - $3M": {
+"contracts": 73.0,
+"volume": 136000000.0
+},
+"$3M - $5M": {
+"contracts": 20.0,
+"volume": 78000000.0
+},
+"$5M - $10M": {
+"contracts": 15.0,
+"volume": 103000000.0
+},
+"$10M+": {
+"contracts": 8.0,
+"volume": 112000000.0
+}
+}
+},
+{
+"week_start": "2026-03-23",
+"condo_contracts": 90.0,
+"condo_volume": 315054000.0,
+"coop_contracts": 144.0,
+"coop_volume": 194549738.0,
+"th_contracts": 3.0,
+"th_volume": 8525000.0,
+"total_contracts": 244.0,
+"total_volume": 533800000.0,
+"luxury_volume": 217122025.0,
+"luxury_volume_share": 0.4067478925,
+"luxury_contracts": 22.0,
+"bedroom": {
+"total_sales": 244.0,
+"mix": {
+"studio": {
+"contracts": 29.0,
+"volume": 15000000.0
+},
+"1": {
+"contracts": 81.0,
+"volume": 70700000.0
+},
+"2": {
+"contracts": 75.0,
+"volume": 139300000.0
+},
+"3": {
+"contracts": 38.0,
+"volume": 144600000.0
+},
+"4+": {
+"contracts": 21.0,
+"volume": 164100000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 107.0,
+"volume": 71000000.0
+},
+"$1M - $3M": {
+"contracts": 96.0,
+"volume": 177000000.0
+},
+"$3M - $5M": {
+"contracts": 21.0,
+"volume": 82000000.0
+},
+"$5M - $10M": {
+"contracts": 13.0,
+"volume": 90000000.0
+},
+"$10M+": {
+"contracts": 5.0,
+"volume": 74000000.0
+}
+}
+},
+{
+"week_start": "2026-03-30",
+"condo_contracts": 91.0,
+"condo_volume": 326163999.0,
+"coop_contracts": 130.0,
+"coop_volume": 193863949.0,
+"th_contracts": 3.0,
+"th_volume": 21198999.0,
+"total_contracts": 225.0,
+"total_volume": 615500000.0,
+"luxury_volume": 335688999.0,
+"luxury_volume_share": 0.5453923623,
+"luxury_contracts": 24.0,
+"bedroom": {
+"total_sales": 225.0,
+"mix": {
+"studio": {
+"contracts": 22.0,
+"volume": 11700000.0
+},
+"1": {
+"contracts": 75.0,
+"volume": 78500000.0
+},
+"2": {
+"contracts": 72.0,
+"volume": 146000000.0
+},
+"3": {
+"contracts": 41.0,
+"volume": 140700000.0
+},
+"4+": {
+"contracts": 15.0,
+"volume": 238500000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 94.0,
+"volume": 62000000.0
+},
+"$1M - $3M": {
+"contracts": 88.0,
+"volume": 170000000.0
+},
+"$3M - $5M": {
+"contracts": 21.0,
+"volume": 79000000.0
+},
+"$5M - $10M": {
+"contracts": 14.0,
+"volume": 88000000.0
+},
+"$10M+": {
+"contracts": 9.0,
+"volume": 252000000.0
+}
+}
+},
+{
+"week_start": "2026-04-06",
+"condo_contracts": 98.0,
+"condo_volume": 349562500.0,
+"coop_contracts": 123.0,
+"coop_volume": 216116500.0,
+"th_contracts": 2.0,
+"th_volume": 24650000.0,
+"total_contracts": 228.0,
+"total_volume": 603300000.0,
+"luxury_volume": 270005000.0,
+"luxury_volume_share": 0.4475468258,
+"luxury_contracts": 27.0,
+"bedroom": {
+"total_sales": 228.0,
+"mix": {
+"studio": {
+"contracts": 17.0,
+"volume": 9000000.0
+},
+"1": {
+"contracts": 74.0,
+"volume": 67800000.0
+},
+"2": {
+"contracts": 69.0,
+"volume": 140800000.0
+},
+"3": {
+"contracts": 37.0,
+"volume": 172400000.0
+},
+"4+": {
+"contracts": 31.0,
+"volume": 213300000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 106.0,
+"volume": 67000000.0
+},
+"$1M - $3M": {
+"contracts": 86.0,
+"volume": 150000000.0
+},
+"$3M - $5M": {
+"contracts": 37.0,
+"volume": 143000000.0
+},
+"$5M - $10M": {
+"contracts": 16.0,
+"volume": 136000000.0
+},
+"$10M+": {
+"contracts": 11.0,
+"volume": 148000000.0
+}
+}
+},
+{
+"week_start": "2026-04-13",
+"condo_contracts": 95.0,
+"condo_volume": 383909000.0,
+"coop_contracts": 124.0,
+"coop_volume": 152621000.0,
+"th_contracts": 4.0,
+"th_volume": 49649000.0,
+"total_contracts": 229.0,
+"total_volume": 604200000.0,
+"luxury_volume": 330876000.0,
+"luxury_volume_share": 0.5476266137,
+"luxury_contracts": 30.0,
+"bedroom": {
+"total_sales": 229.0,
+"mix": {
+"studio": {
+"contracts": 29.0,
+"volume": 15500000.0
+},
+"1": {
+"contracts": 73.0,
+"volume": 62100000.0
+},
+"2": {
+"contracts": 71.0,
+"volume": 132300000.0
+},
+"3": {
+"contracts": 35.0,
+"volume": 143100000.0
+},
+"4+": {
+"contracts": 21.0,
+"volume": 251200000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 106.0,
+"volume": 68000000.0
+},
+"$1M - $3M": {
+"contracts": 82.0,
+"volume": 149000000.0
+},
+"$3M - $5M": {
+"contracts": 19.0,
+"volume": 72000000.0
+},
+"$5M - $10M": {
+"contracts": 18.0,
+"volume": 135000000.0
+},
+"$10M+": {
+"contracts": 12.0,
+"volume": 212000000.0
+}
+}
+},
+{
+"week_start": "2026-04-20",
+"condo_contracts": 89.0,
+"condo_volume": 297146000.0,
+"coop_contracts": 126.0,
+"coop_volume": 186796112.0,
+"th_contracts": 4.0,
+"th_volume": 32550000.0,
+"total_contracts": 224.0,
+"total_volume": 525500000.0,
+"luxury_volume": 240845000.0,
+"luxury_volume_share": 0.4583158896,
+"luxury_contracts": 25.0,
+"bedroom": {
+"total_sales": 224.0,
+"mix": {
+"studio": {
+"contracts": 29.0,
+"volume": 15800000.0
+},
+"1": {
+"contracts": 72.0,
+"volume": 66600000.0
+},
+"2": {
+"contracts": 65.0,
+"volume": 130100000.0
+},
+"3": {
+"contracts": 40.0,
+"volume": 136400000.0
+},
+"4+": {
+"contracts": 22.0,
+"volume": 176700000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 88.0,
+"volume": 58000000.0
+},
+"$1M - $3M": {
+"contracts": 100.0,
+"volume": 176000000.0
+},
+"$3M - $5M": {
+"contracts": 26.0,
+"volume": 98000000.0
+},
+"$5M - $10M": {
+"contracts": 17.0,
+"volume": 115000000.0
+},
+"$10M+": {
+"contracts": 7.0,
+"volume": 123000000.0
+}
+}
+},
+{
+"week_start": "2026-04-27",
+"condo_contracts": 110.0,
+"condo_volume": 241598195.0,
+"coop_contracts": 117.0,
+"coop_volume": 174074899.0,
+"th_contracts": 3.0,
+"th_volume": 32225000.0,
+"total_contracts": 236.0,
+"total_volume": 503300000.0,
+"luxury_volume": 185804995.0,
+"luxury_volume_share": 0.3691734453,
+"luxury_contracts": 23.0,
+"bedroom": {
+"total_sales": 236.0,
+"mix": {
+"studio": {
+"contracts": 30.0,
+"volume": 15300000.0
+},
+"1": {
+"contracts": 73.0,
+"volume": 69100000.0
+},
+"2": {
+"contracts": 73.0,
+"volume": 120100000.0
+},
+"3": {
+"contracts": 37.0,
+"volume": 140100000.0
+},
+"4+": {
+"contracts": 23.0,
+"volume": 158800000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 115.0,
+"volume": 78000000.0
+},
+"$1M - $3M": {
+"contracts": 86.0,
+"volume": 155000000.0
+},
+"$3M - $5M": {
+"contracts": 28.0,
+"volume": 105000000.0
+},
+"$5M - $10M": {
+"contracts": 15.0,
+"volume": 102000000.0
+},
+"$10M+": {
+"contracts": 8.0,
+"volume": 112000000.0
+}
+}
+},
+{
+"week_start": "2026-05-04",
+"condo_contracts": 102.0,
+"condo_volume": 205885000.0,
+"coop_contracts": 135.0,
+"coop_volume": 223254898.0,
+"th_contracts": 4.0,
+"th_volume": 35745000.0,
+"total_contracts": 243.0,
+"total_volume": 563500000.0,
+"luxury_volume": 180020000.0,
+"luxury_volume_share": 0.3194676131,
+"luxury_contracts": 20.0,
+"bedroom": {
+"total_sales": 243.0,
+"mix": {
+"studio": {
+"contracts": 29.0,
+"volume": 14300000.0
+},
+"1": {
+"contracts": 81.0,
+"volume": 74900000.0
+},
+"2": {
+"contracts": 66.0,
+"volume": 131000000.0
+},
+"3": {
+"contracts": 37.0,
+"volume": 125400000.0
+},
+"4+": {
+"contracts": 30.0,
+"volume": 217900000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 94.0,
+"volume": 61000000.0
+},
+"$1M - $3M": {
+"contracts": 103.0,
+"volume": 194000000.0
+},
+"$3M - $5M": {
+"contracts": 28.0,
+"volume": 112000000.0
+},
+"$5M - $10M": {
+"contracts": 14.0,
+"volume": 90000000.0
+},
+"$10M+": {
+"contracts": 9.0,
+"volume": 123000000.0
+}
+}
+},
+{
+"week_start": "2026-05-11",
+"condo_contracts": 99.0,
+"condo_volume": 286683048.0,
+"coop_contracts": 135.0,
+"coop_volume": 199645849.0,
+"th_contracts": 8.0,
+"th_volume": 70200000.0,
+"total_contracts": 239.0,
+"total_volume": 568000000.0,
+"luxury_volume": 206635000.0,
+"luxury_volume_share": 0.3637940141,
+"luxury_contracts": 23.0,
+"bedroom": {
+"total_sales": 239.0,
+"mix": {
+"studio": {
+"contracts": 20.0,
+"volume": 10700000.0
+},
+"1": {
+"contracts": 71.0,
+"volume": 62500000.0
+},
+"2": {
+"contracts": 84.0,
+"volume": 178400000.0
+},
+"3": {
+"contracts": 39.0,
+"volume": 122000000.0
+},
+"4+": {
+"contracts": 25.0,
+"volume": 194400000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 93.0,
+"volume": 64000000.0
+},
+"$1M - $3M": {
+"contracts": 97.0,
+"volume": 181000000.0
+},
+"$3M - $5M": {
+"contracts": 40.0,
+"volume": 154000000.0
+},
+"$5M - $10M": {
+"contracts": 15.0,
+"volume": 103000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 90000000.0
+}
+}
+},
+{
+"week_start": "2026-05-18",
+"condo_contracts": 102.0,
+"condo_volume": 296780000.0,
+"coop_contracts": 135.0,
+"coop_volume": 235642999.0,
+"th_contracts": 2.0,
+"th_volume": 11100000.0,
+"total_contracts": 249.0,
+"total_volume": 564600000.0,
+"luxury_volume": 187378000.0,
+"luxury_volume_share": 0.3318774354,
+"luxury_contracts": 20.0,
+"bedroom": {
+"total_sales": 249.0,
+"mix": {
+"studio": {
+"contracts": 34.0,
+"volume": 19000000.0
+},
+"1": {
+"contracts": 82.0,
+"volume": 77600000.0
+},
+"2": {
+"contracts": 73.0,
+"volume": 154000000.0
+},
+"3": {
+"contracts": 39.0,
+"volume": 152800000.0
+},
+"4+": {
+"contracts": 21.0,
+"volume": 161200000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 106.0,
+"volume": 71000000.0
+},
+"$1M - $3M": {
+"contracts": 96.0,
+"volume": 172000000.0
+},
+"$3M - $5M": {
+"contracts": 31.0,
+"volume": 120000000.0
+},
+"$5M - $10M": {
+"contracts": 11.0,
+"volume": 78000000.0
+},
+"$10M+": {
+"contracts": 7.0,
+"volume": 106000000.0
+}
+}
+},
+{
+"week_start": "2026-05-25",
+"condo_contracts": 84.0,
+"condo_volume": 258777399.0,
+"coop_contracts": 91.0,
+"coop_volume": 138632800.0,
+"th_contracts": 5.0,
+"th_volume": 29900000.0,
+"total_contracts": 183.0,
+"total_volume": 442600000.0,
+"luxury_volume": 211033000.0,
+"luxury_volume_share": 0.4768029824,
+"luxury_contracts": 25.0,
+"bedroom": {
+"total_sales": 183.0,
+"mix": {
+"studio": {
+"contracts": 11.0,
+"volume": 5400000.0
+},
+"1": {
+"contracts": 61.0,
+"volume": 56500000.0
+},
+"2": {
+"contracts": 56.0,
+"volume": 115600000.0
+},
+"3": {
+"contracts": 33.0,
+"volume": 121600000.0
+},
+"4+": {
+"contracts": 22.0,
+"volume": 143500000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 71.0,
+"volume": 50000000.0
+},
+"$1M - $3M": {
+"contracts": 83.0,
+"volume": 150000000.0
+},
+"$3M - $5M": {
+"contracts": 18.0,
+"volume": 68000000.0
+},
+"$5M - $10M": {
+"contracts": 18.0,
+"volume": 120000000.0
+},
+"$10M+": {
+"contracts": 6.0,
+"volume": 89000000.0
+}
+}
+},
+{
+"week_start": "2026-06-01",
+"condo_contracts": 103.0,
+"condo_volume": 306681898.0,
+"coop_contracts": 129.0,
+"coop_volume": 205000999.0,
+"th_contracts": 5.0,
+"th_volume": 99465000.0,
+"total_contracts": 245.0,
+"total_volume": 651200000.0,
+"luxury_volume": 297865000.0,
+"luxury_volume_share": 0.457409398,
+"luxury_contracts": 25.0,
+"bedroom": {
+"total_sales": 245.0,
+"mix": {
+"studio": {
+"contracts": 36.0,
+"volume": 19800000.0
+},
+"1": {
+"contracts": 74.0,
+"volume": 74800000.0
+},
+"2": {
+"contracts": 82.0,
+"volume": 177400000.0
+},
+"3": {
+"contracts": 34.0,
+"volume": 134700000.0
+},
+"4+": {
+"contracts": 19.0,
+"volume": 244400000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 99.0,
+"volume": 66000000.0
+},
+"$1M - $3M": {
+"contracts": 98.0,
+"volume": 175000000.0
+},
+"$3M - $5M": {
+"contracts": 33.0,
+"volume": 128000000.0
+},
+"$5M - $10M": {
+"contracts": 15.0,
+"volume": 97000000.0
+},
+"$10M+": {
+"contracts": 8.0,
+"volume": 193000000.0
+}
+}
+},
+{
+"week_start": "2026-06-08",
+"condo_contracts": 106.0,
+"condo_volume": 316186999.0,
+"coop_contracts": 135.0,
+"coop_volume": 255804008.0,
+"th_contracts": 3.0,
+"th_volume": 24050000.0,
+"total_contracts": 254.0,
+"total_volume": 622000997.0,
+"luxury_volume": 262125000.0,
+"luxury_volume_share": 0.4214221541,
+"luxury_contracts": 27.0,
+"bedroom": {
+"total_sales": 254.0,
+"mix": {
+"studio": {
+"contracts": 26.0,
+"volume": 15700000.0
+},
+"1": {
+"contracts": 93.0,
+"volume": 105400000.0
+},
+"2": {
+"contracts": 84.0,
+"volume": 175000000.0
+},
+"3": {
+"contracts": 32.0,
+"volume": 155200000.0
+},
+"4+": {
+"contracts": 19.0,
+"volume": 170700000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 107.0,
+"volume": 74000000.0
+},
+"$1M - $3M": {
+"contracts": 110.0,
+"volume": 200000000.0
+},
+"$3M - $5M": {
+"contracts": 28.0,
+"volume": 109000000.0
+},
+"$5M - $10M": {
+"contracts": 20.0,
+"volume": 127000000.0
+},
+"$10M+": {
+"contracts": 9.0,
+"volume": 222000000.0
+}
+}
+},
+{
+"week_start": "2026-06-15",
+"condo_contracts": 91.0,
+"condo_volume": 223749999.0,
+"coop_contracts": 117.0,
+"coop_volume": 204014499.0,
+"th_contracts": 3.0,
+"th_volume": 32075000.0,
+"total_contracts": 216.0,
+"total_volume": 480000000.0,
+"luxury_volume": 159369000.0,
+"luxury_volume_share": 0.33201875,
+"luxury_contracts": 18.0,
+"bedroom": {
+"total_sales": 216.0,
+"mix": {
+"studio": {
+"contracts": 24.0,
+"volume": 13600000.0
+},
+"1": {
+"contracts": 77.0,
+"volume": 79300000.0
+},
+"2": {
+"contracts": 69.0,
+"volume": 140100000.0
+},
+"3": {
+"contracts": 30.0,
+"volume": 105400000.0
+},
+"4+": {
+"contracts": 16.0,
+"volume": 141600000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 86.0,
+"volume": 57000000.0
+},
+"$1M - $3M": {
+"contracts": 98.0,
+"volume": 173000000.0
+},
+"$3M - $5M": {
+"contracts": 16.0,
+"volume": 64000000.0
+},
+"$5M - $10M": {
+"contracts": 13.0,
+"volume": 90000000.0
+},
+"$10M+": {
+"contracts": 6.0,
+"volume": 92000000.0
+}
+}
+},
+{
+"week_start": "2026-06-22",
+"condo_contracts": 86.0,
+"condo_volume": 245382350.0,
+"coop_contracts": 109.0,
+"coop_volume": 174996888.0,
+"th_contracts": 4.0,
+"th_volume": 21107500.0,
+"total_contracts": 205.0,
+"total_volume": 448600000.0,
+"luxury_volume": 145745000.0,
+"luxury_volume_share": 0.3248885421,
+"luxury_contracts": 17.0,
+"bedroom": {
+"total_sales": 205.0,
+"mix": {
+"studio": {
+"contracts": 20.0,
+"volume": 10600000.0
+},
+"1": {
+"contracts": 71.0,
+"volume": 70100000.0
+},
+"2": {
+"contracts": 68.0,
+"volume": 137200000.0
+},
+"3": {
+"contracts": 26.0,
+"volume": 82500000.0
+},
+"4+": {
+"contracts": 20.0,
+"volume": 148100000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 81.0,
+"volume": 56000000.0
+},
+"$1M - $3M": {
+"contracts": 87.0,
+"volume": 157000000.0
+},
+"$3M - $5M": {
+"contracts": 25.0,
+"volume": 97000000.0
+},
+"$5M - $10M": {
+"contracts": 12.0,
+"volume": 78000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 53000000.0
+}
+}
+},
+{
+"week_start": "2026-06-29",
+"condo_contracts": 81.0,
+"condo_volume": 240831999.0,
+"coop_contracts": 86.0,
+"coop_volume": 108265000.0,
+"th_contracts": 1.0,
+"th_volume": 2225000.0,
+"total_contracts": 178.0,
+"total_volume": 378600000.0,
+"luxury_volume": 121470000.0,
+"luxury_volume_share": 0.3208399366,
+"luxury_contracts": 8.0,
+"bedroom": {
+"total_sales": 178.0,
+"mix": {
+"studio": {
+"contracts": 18.0,
+"volume": 11000000.0
+},
+"1": {
+"contracts": 66.0,
+"volume": 60700000.0
+},
+"2": {
+"contracts": 61.0,
+"volume": 117400000.0
+},
+"3": {
+"contracts": 21.0,
+"volume": 92500000.0
+},
+"4+": {
+"contracts": 12.0,
+"volume": 97000000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 73.0,
+"volume": 49000000.0
+},
+"$1M - $3M": {
+"contracts": 81.0,
+"volume": 145000000.0
+},
+"$3M - $5M": {
+"contracts": 18.0,
+"volume": 67000000.0
+},
+"$5M - $10M": {
+"contracts": 6.0,
+"volume": 43000000.0
+},
+"$10M+": {
+"contracts": 2.0,
+"volume": 81000000.0
+}
+}
+},
+{
+"week_start": "2026-07-06",
+"condo_contracts": 110.0,
+"condo_volume": 283025449.0,
+"coop_contracts": 90.0,
+"coop_volume": 122009384.0,
+"th_contracts": 2.0,
+"th_volume": 8650000.0,
+"total_contracts": 207.0,
+"total_volume": 425600000.0,
+"luxury_volume": 132375000.0,
+"luxury_volume_share": 0.311031485,
+"luxury_contracts": 18.0,
+"bedroom": {
+"total_sales": 206.0,
+"mix": {
+"studio": {
+"contracts": 24.0,
+"volume": 13000000.0
+},
+"1": {
+"contracts": 73.0,
+"volume": 69300000.0
+},
+"2": {
+"contracts": 60.0,
+"volume": 129700000.0
+},
+"3": {
+"contracts": 26.0,
+"volume": 82000000.0
+},
+"4+": {
+"contracts": 23.0,
+"volume": 130200000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 85.0,
+"volume": 57000000.0
+},
+"$1M - $3M": {
+"contracts": 80.0,
+"volume": 153000000.0
+},
+"$3M - $5M": {
+"contracts": 27.0,
+"volume": 107000000.0
+},
+"$5M - $10M": {
+"contracts": 13.0,
+"volume": 85000000.0
+},
+"$10M+": {
+"contracts": 1.0,
+"volume": 21000000.0
+}
+}
+},
+{
+"week_start": "2026-07-13",
+"condo_contracts": 98.0,
+"condo_volume": 283247500.0,
+"coop_contracts": 92.0,
+"coop_volume": 118323899.0,
+"th_contracts": 5.0,
+"th_volume": 24228000.0,
+"total_contracts": 201.0,
+"total_volume": 435700000.0,
+"luxury_volume": 171856000.0,
+"luxury_volume_share": 0.3944365389,
+"luxury_contracts": 20.0,
+"bedroom": {
+"total_sales": 201.0,
+"mix": {
+"studio": {
+"contracts": 24.0,
+"volume": 11600000.0
+},
+"1": {
+"contracts": 53.0,
+"volume": 52900000.0
+},
+"2": {
+"contracts": 79.0,
+"volume": 141900000.0
+},
+"3": {
+"contracts": 32.0,
+"volume": 124900000.0
+},
+"4+": {
+"contracts": 13.0,
+"volume": 104500000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 89.0,
+"volume": 57000000.0
+},
+"$1M - $3M": {
+"contracts": 75.0,
+"volume": 140000000.0
+},
+"$3M - $5M": {
+"contracts": 17.0,
+"volume": 68000000.0
+},
+"$5M - $10M": {
+"contracts": 16.0,
+"volume": 106000000.0
+},
+"$10M+": {
+"contracts": 4.0,
+"volume": 64000000.0
+}
+}
+},
+{
+"week_start": "2026-07-20",
+"condo_contracts": 60.0,
+"condo_volume": 146786899.0,
+"coop_contracts": 96.0,
+"coop_volume": 141784404.0,
+"th_contracts": 4.0,
+"th_volume": 18900000.0,
+"total_contracts": 166.0,
+"total_volume": 312700000.0,
+"luxury_volume": 109890000.0,
+"luxury_volume_share": 0.3514230892,
+"luxury_contracts": 12.0,
+"bedroom": {
+"total_sales": 166.0,
+"mix": {
+"studio": {
+"contracts": 20.0,
+"volume": 10400000.0
+},
+"1": {
+"contracts": 61.0,
+"volume": 58100000.0
+},
+"2": {
+"contracts": 48.0,
+"volume": 84100000.0
+},
+"3": {
+"contracts": 22.0,
+"volume": 60900000.0
+},
+"4+": {
+"contracts": 15.0,
+"volume": 99200000.0
+}
+}
+},
+"price_points": {
+"Below $1M": {
+"contracts": 74.0,
+"volume": 48000000.0
+},
+"$1M - $3M": {
+"contracts": 68.0,
+"volume": 119000000.0
+},
+"$3M - $5M": {
+"contracts": 15.0,
+"volume": 61000000.0
+},
+"$5M - $10M": {
+"contracts": 10.0,
+"volume": 69000000.0
+},
+"$10M+": {
+"contracts": 2.0,
+"volume": 47000000.0
+}
+}
+}
+]

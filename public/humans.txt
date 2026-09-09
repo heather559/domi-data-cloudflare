@@ -1,0 +1,13 @@
+/* TEAM */
+Publisher: Heather Domi
+Firm: Douglas Elliman
+Site: https://heatherdomi.com
+Contact: https://domidata.heatherdomi.com/contact
+
+/* DATA */
+Source: Marketproof
+Reconciliation: ACRIS (quarterly)
+
+/* SITE */
+Standards: HTML5, WCAG 2.1 AA
+Components: TanStack Start, React, Chart.js

@@ -1,0 +1,1 @@
+ALTER TABLE public.agent_sessions ADD COLUMN IF NOT EXISTS data_pull_count integer NOT NULL DEFAULT 0;

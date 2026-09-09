@@ -1,0 +1,1 @@
+ALTER TABLE public.agent_sessions ADD COLUMN IF NOT EXISTS post_handoff_replies integer NOT NULL DEFAULT 0;
