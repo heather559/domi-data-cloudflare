@@ -12,10 +12,11 @@ const serverEnv = loadEnv(process.env.NODE_ENV || "development", process.cwd(), 
 Object.assign(process.env, serverEnv);
 
 export default defineConfig({
-  // nodeCompat must stay on: TanStack Start's request context and src/lib/request-ctx
-  // both rely on node:async_hooks AsyncLocalStorage. Disabling it made every SSR
-  // data route 500 with "No Start context found in AsyncLocalStorage".
-  nitro: { cloudflare: { nodeCompat: true, deployConfig: true } },
+  // Deploying to Railway (plain Node.js), not Cloudflare Workers, so we target Nitro's
+  // node-server preset instead of cloudflare-module. node:async_hooks (which request-ctx
+  // relies on for AsyncLocalStorage) is natively available on Node, so the old
+  // Workers-only nodeCompat shim is no longer needed.
+  nitro: { preset: "node-server" },
   tanstackStart: {
     server: { entry: "server" },
   },
