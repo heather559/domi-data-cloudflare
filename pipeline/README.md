@@ -87,3 +87,10 @@ dependency-light service with no need for ESM-only packages.
 - **Phase 2/3**: real Marketproof HTTP clients, the full `compute/` layer
   implementing the spec's STEP 1-7.5 field mappings, backfill/shadow-mode
   harness against the existing AI-agent's output before cutover.
+
+## Deployment
+
+Runs on Railway as service `domi-data-pipeline` in the `domi-data` project,
+root directory `pipeline/`, weekly cron schedule `5 8 * * 1` (Mon 8:05 UTC --
+comfortably clears both EDT and EST so the DST-safe week math in `lib/week.ts`
+is never evaluated right at a schedule boundary).
