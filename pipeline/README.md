@@ -52,6 +52,50 @@ re-deriving the same guardrails:
 | `SUPABASE_URL` | Same env var name the deployed site already uses. |
 | `SUPABASE_SERVICE_ROLE_KEY` | Same env var name the deployed site already uses. Bypasses RLS -- `weekly_report`/`pipeline_run_status` have RLS enabled with zero policies (deny-by-default, service-role-only) by design. |
 | `SLACK_WEBHOOK_URL` | A Slack **Incoming Webhook** URL (`https://hooks.slack.com/services/...`). See `io/slack.ts` for why a webhook was chosen over the `chat.postMessage` bot-token API. Needs to be created in Slack and set on the Railway service before this runs for real. |
+| `MARKETPROOF_API_KEY` | Set on the `domi-data-pipeline` Railway service (Phase 2). Used by every client in `fetch/` and by `topDeals/` (as the MCP server's `authorization_token`). |
+| `ANTHROPIC_API_KEY` | Set on the `domi-data-pipeline` Railway service (Phase 2). Used only by `topDeals/fetchTopDeals.ts` -- the one deliberately AI-touched piece of this pipeline. |
+
+## Phase 2 additions: `fetch/` and `topDeals/`
+
+Built and tested in isolation this pass -- **not yet wired into `index.ts`'s
+scheduled run, and nothing here writes to `weekly_report`.** That's Phase 3.
+
+- `fetch/` -- plain, zero-AI, typed Marketproof REST clients, one per
+  dataset, sharing `fetch/marketproofClient.ts`'s retry-once-then-null
+  helper (matching the spec's own HARD RULE verbatim). Built:
+  `contractStats`, `weeklyContractStats`, `luxuryContractStats`,
+  `neighborhoodRank`, `supply`. A response that comes back HTTP 200 but
+  fails its Zod schema throws `MarketproofSchemaError` immediately rather
+  than being silently retried/nulled -- that's a "our understanding of the
+  API shape is wrong" signal, not a transient failure. **Provenance
+  caveat:** `luxuryContractStats`/`weeklyContractStats`/`neighborhoodRank`'s
+  schemas are built from the field names the ground-truth spec's own STEP
+  1-5 usage text quotes (e.g. `lines.p90.cutoff`,
+  `contractsByPeriod[].contractCount/totalPrice/avgDaysOnMarket`); the base
+  `contractStats` and `supply` schemas are inferred (from Marketproof's own
+  `{base, weekly-, monthly-}` dataset naming pattern, and from what STEP 5
+  says is *done* with the response, respectively) rather than quoted
+  anywhere in the spec -- both are kept deliberately loose
+  (`.passthrough()`/`z.record`) until a live call confirms the real shape.
+  `contractStats.test.ts` and `neighborhoodRank.test.ts` are real,
+  read-only integration tests against the live API (skip gracefully if
+  `MARKETPROOF_API_KEY` isn't set).
+
+- `topDeals/fetchTopDeals.ts` -- the STEP 6 "Top 5 Deals" feature. This is
+  the one part of the whole pipeline that can't be built from the plain
+  REST API (record-level named addresses aren't in any REST dataset --
+  confirmed by direct testing, and by Marketproof's own docs, which put
+  that data behind their MCP connector instead). Implemented as a single,
+  narrow call to Anthropic's Messages API with Marketproof's remote MCP
+  server attached via the MCP connector (`mcp_servers` + `tools:
+  [{type: "mcp_toolset", ...}]`, beta `mcp-client-2025-11-20`) -- not an
+  open-ended agent, one request that must return only a JSON array
+  matching `topDealSchema`, validated before it's ever trusted. See the
+  file's own header comment for the exact determinism tradeoff (current
+  models reject an explicit `temperature` parameter outright) and how
+  `pause_turn` is handled. `fetchTopDeals.test.ts` is a real, live
+  integration test (skips gracefully unless both `ANTHROPIC_API_KEY` and
+  `MARKETPROOF_API_KEY` are set).
 
 ## Running locally
 

@@ -1,0 +1,1 @@
+export { fetchTopDeals } from './fetchTopDeals';
