@@ -302,6 +302,7 @@ export const marketReadBadgeSchema = z.object({
   badge: z.string(), // one of BUSY/ABOVE PACE/NORMAL/SLOW/QUIET, optionally + " -- SEASONAL"
   class: z.string(), // one of read--busy/read--above/read--normal/read--slow/read--quiet
 });
+export type MarketReadBadge = z.infer<typeof marketReadBadgeSchema>;
 
 export const sowhatFootnotesSchema = z.object({
   asking_not_achieved: z.string(),

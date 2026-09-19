@@ -144,6 +144,42 @@ export const weeklyContractStatsResponseSchema = z
 export type WeeklyContractStatsResponse = z.infer<typeof weeklyContractStatsResponseSchema>;
 
 // ---------------------------------------------------------------------------
+// weekly-sales-stats (STEP 3/3.5). UNCONFIRMED against live data -- this
+// pipeline was built without a working MARKETPROOF_API_KEY in the session
+// that wrote this file (see the task's final report), so unlike the schemas
+// above, this one has NOT been validated against a real response. Modeled
+// defensively on the spec's own explicit description: STEP 3 says
+// "if type-split, week-aligned recorded sales count/ppsf/discount/dom per
+// type"; STEP 3.5 says the response "splits into
+// condos/coops/townhouses.*.salesByWeek[] (no pooled 'all' bucket)".
+// `.passthrough()` + optional everywhere, same defensive posture as the
+// original (pre-live-test) guesses for the other datasets in this file --
+// treat this one the same way: confirm against a real call before trusting
+// it, and correct here (with a comment, like the others) if it's wrong.
+// ---------------------------------------------------------------------------
+
+const salesWeekBucketSchema = z
+  .object({
+    total: z.number().nullish(),
+    salesByWeek: z.array(contractPeriodEntrySchema).default([]),
+  })
+  .passthrough();
+
+export const weeklySalesStatsResponseSchema = z
+  .object({
+    // STEP 3.5 says there's no pooled "all" bucket on THIS dataset, but
+    // STEP 3 talks about detecting whether the response "is type-split" at
+    // all -- implying a pooled variant may exist for some query shapes.
+    // Modeled as optional so callers can check for its presence directly.
+    all: salesWeekBucketSchema.optional(),
+    condos: salesWeekBucketSchema.optional(),
+    coops: salesWeekBucketSchema.optional(),
+    townhouses: salesWeekBucketSchema.optional(),
+  })
+  .passthrough();
+export type WeeklySalesStatsResponse = z.infer<typeof weeklySalesStatsResponseSchema>;
+
+// ---------------------------------------------------------------------------
 // contract-stats (the base, non-time-bucketed dataset). CORRECTED 2026-09-19
 // against a real response (q: "borough:manhattan") -- the original guess
 // (an "all"/type-bucket structure mirroring a single week/period entry) was
