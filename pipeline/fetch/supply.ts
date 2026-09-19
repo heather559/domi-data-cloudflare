@@ -9,11 +9,10 @@ export interface SupplyParams {
 }
 
 /**
- * supply -- active-listing/months-supply/absorption feed (STEP 5). One retry
- * on failure, then `null`. See schemas.ts for why the response schema here is
- * intentionally loose -- this is the least textually-confirmed endpoint of
- * the five built in this pass; a live call is what will reveal its real
- * field names before Phase 3's compute layer can rely on any of them.
+ * supply -- active-listing feed (STEP 5). One retry on failure, then `null`.
+ * Response shape confirmed 2026-09-19 against a real call -- see schemas.ts
+ * for the exact fields (top-level `series: [{date, supply}]` is the one
+ * STEP 5 actually reads; the per-property-type breakdown is incidental).
  */
 export async function fetchSupply(params: SupplyParams): Promise<SupplyResponse | null> {
   return fetchMarketproofDataset('supply', params, supplyResponseSchema);

@@ -18,6 +18,16 @@ import { z } from 'zod';
  * these shapes against live data. Where a live test run revealed the real
  * shape differed from this initial guess, that's called out in the pipeline
  * README and the task's final report, not silently patched over.
+ *
+ * UPDATE 2026-09-19: `luxuryContractStatsResponseSchema` and
+ * `weeklyContractStatsResponseSchema` were confirmed correct (with minor
+ * additions) against real, live responses. `neighborhoodEntrySchema`,
+ * `contractStatsResponseSchema`, and `supplyResponseSchema` were WRONG in
+ * their first pass and have been corrected below to match real payloads
+ * captured this date -- see each section's own comment for what changed and
+ * why. This is exactly the "ask/verify, don't guess" loop this file's
+ * original comment promised: the schemas below are no longer inferred, they
+ * are confirmed shapes.
  */
 
 // ---------------------------------------------------------------------------
@@ -87,13 +97,38 @@ export const luxuryContractStatsResponseSchema = z
 export type LuxuryContractStatsResponse = z.infer<typeof luxuryContractStatsResponseSchema>;
 
 // ---------------------------------------------------------------------------
-// weekly-contract-stats: "all" + optional per-type buckets, each a week series.
+// weekly-contract-stats: "all" + per-type buckets, each a week series.
+// CONFIRMED against a real response 2026-09-19 (q: "borough:manhattan"):
+// top-level keys are totalCount, all/condos/coops/townhouses (each
+// {total, contractsByWeek: [...]}), a TOP-LEVEL contractsByBeds (array of
+// {date, totalSales, unitMix}, NOT nested inside each bucket as first
+// guessed), rolling90Day/previousRolling90Day, fromCache/from_cache.
 // ---------------------------------------------------------------------------
 
 const weekBucketSchema = z
   .object({
+    total: z.number().nullish(),
     contractsByWeek: z.array(contractPeriodEntrySchema).default([]),
-    contractsByBeds: z.record(z.string(), z.number().nullish()).optional(),
+  })
+  .passthrough();
+
+// Confirmed live 2026-09-19: bedrooms is 0/1/2/3 (number), "4+" (string), or
+// null (an "unknown bed count" bucket) -- this pipeline's own bedroom_mix
+// schema (schema/weeklyReportPayload.ts) models the exact same
+// studio/1/2/3/4+ bucket set, for reference.
+const unitMixEntrySchema = z
+  .object({
+    bedrooms: z.union([z.string(), z.number()]).nullish(),
+    salesCount: z.number().nullish(),
+    dollarVolume: z.number().nullish(),
+  })
+  .passthrough();
+
+const contractsByBedsEntrySchema = z
+  .object({
+    date: z.string(),
+    totalSales: z.number().nullish(),
+    unitMix: z.array(unitMixEntrySchema).default([]),
   })
   .passthrough();
 
@@ -103,42 +138,66 @@ export const weeklyContractStatsResponseSchema = z
     condos: weekBucketSchema.optional(),
     coops: weekBucketSchema.optional(),
     townhouses: weekBucketSchema.optional(),
+    contractsByBeds: z.array(contractsByBedsEntrySchema).optional(),
   })
   .passthrough();
 export type WeeklyContractStatsResponse = z.infer<typeof weeklyContractStatsResponseSchema>;
 
 // ---------------------------------------------------------------------------
-// contract-stats (the base, non-time-bucketed dataset -- structural sibling
-// of weekly-contract-stats/monthly-contract-stats per Marketproof's own
-// dataset-name pattern of {base, weekly-, monthly-} variants). This one has
-// no usage example anywhere in the ground-truth spec text (the spec never
-// calls plain "contract-stats" directly) -- shape below is inferred from
-// that naming pattern alone: an aggregate (non-time-series) summary per
-// bucket, same field vocabulary as a single contractsByWeek/contractsByPeriod
-// entry. NOT yet confirmed against a real response inside this codebase;
-// confirm via contractStats.test.ts before anything downstream depends on
-// specific field names beyond what's asserted there.
+// contract-stats (the base, non-time-bucketed dataset). CORRECTED 2026-09-19
+// against a real response (q: "borough:manhattan") -- the original guess
+// (an "all"/type-bucket structure mirroring a single week/period entry) was
+// WRONG. The real shape is QUARTERLY-bucketed, not a flat aggregate, and has
+// no "all" bucket at all (unlike weekly-contract-stats, which does):
+//
+//   { totalCount, condos: {total, contractsByQuarter: [...]},
+//     coops: {...}, townhouses: {...}, contractsByBeds: [...],
+//     rolling90Day: {totalCount, condos: {total, totalPrice, avgDaysOnMarket}, ...},
+//     previousRolling90Day: {...same shape as rolling90Day...},
+//     fromCache, from_cache }
 // ---------------------------------------------------------------------------
 
-const aggregateBucketSchema = z
+const quarterBucketSchema = z
   .object({
-    contractCount: z.number().nullish(),
-    salesCount: z.number().nullish(),
+    total: z.number().nullish(),
+    contractsByQuarter: z.array(contractPeriodEntrySchema).default([]),
+  })
+  .passthrough();
+
+const rolling90DayTypeBucketSchema = z
+  .object({
+    total: z.number().nullish(),
     totalPrice: z.number().nullish(),
-    medianPrice: z.number().nullish(),
-    averagePrice: z.number().nullish(),
-    ppsf: z.number().nullish(),
     avgDaysOnMarket: z.number().nullish(),
-    discount: z.number().nullish(),
+  })
+  .passthrough();
+
+const rolling90DayContractsByBedsSchema = z
+  .object({
+    totalSales: z.number().nullish(),
+    unitMix: z.array(unitMixEntrySchema).default([]),
+  })
+  .passthrough();
+
+const rolling90DaySchema = z
+  .object({
+    totalCount: z.number().nullish(),
+    condos: rolling90DayTypeBucketSchema.optional(),
+    coops: rolling90DayTypeBucketSchema.optional(),
+    townhouses: rolling90DayTypeBucketSchema.optional(),
+    contractsByBeds: rolling90DayContractsByBedsSchema.optional(),
   })
   .passthrough();
 
 export const contractStatsResponseSchema = z
   .object({
-    all: aggregateBucketSchema.optional(),
-    condos: aggregateBucketSchema.optional(),
-    coops: aggregateBucketSchema.optional(),
-    townhouses: aggregateBucketSchema.optional(),
+    totalCount: z.number().nullish(),
+    condos: quarterBucketSchema.optional(),
+    coops: quarterBucketSchema.optional(),
+    townhouses: quarterBucketSchema.optional(),
+    contractsByBeds: z.array(contractsByBedsEntrySchema).optional(),
+    rolling90Day: rolling90DaySchema.optional(),
+    previousRolling90Day: rolling90DaySchema.optional(),
   })
   .passthrough();
 export type ContractStatsResponse = z.infer<typeof contractStatsResponseSchema>;
@@ -164,7 +223,12 @@ const neighborhoodTierSchema = z
 
 export const neighborhoodEntrySchema = z
   .object({
-    name: z.string(),
+    // CORRECTED 2026-09-19: the real field is `neighborhood`, not `name` --
+    // confirmed against a real response, which failed validation on the
+    // original `name` guess (every entry came back with `name: undefined`).
+    // The spec's own "match by name" phrasing (STEP 4b/4d) refers to
+    // matching on this field's value, not a literal JSON key called "name".
+    neighborhood: z.string(),
     rank: z.number().nullish(),
     totalContracts: z.number().nullish(),
     tiers: z
@@ -186,14 +250,43 @@ export const neighborhoodRankResponseSchema = z
 export type NeighborhoodRankResponse = z.infer<typeof neighborhoodRankResponseSchema>;
 
 // ---------------------------------------------------------------------------
-// supply -- LEAST confirmed of the five: the spec only ever describes what's
-// DONE with this endpoint's output ("last value" -> *.active, "full 52-week
-// series" -> supply_series.*), never quotes an actual response field name the
-// way it does for the other four endpoints. Left maximally permissive
-// (passthrough on everything) rather than asserting field names invented
-// with no textual basis -- do not tighten this beyond what a live test
-// confirms.
+// supply -- CONFIRMED 2026-09-19 against a real response
+// ({granularity:"weekly", borough:"Manhattan"}, no min_price):
+//
+//   { series: [{date, supply}, ...] (52 entries -- the series for THIS
+//       call's own filter, i.e. whichever min_price was or wasn't passed),
+//     all: {series: [...]}, condos: {series: [...]}, coops: {series: [...]},
+//     townhouses: {series: [...]}, fromCache, from_cache }
+//
+// STEP 5 makes three SEPARATE calls (no min_price / min_price=p90 cutoff /
+// min_price=p95 cutoff) to get all-Manhattan/luxury/prime respectively --
+// the condos/coops/townhouses breakdown inside a single response is a
+// property-type split of THAT call's own filtered result, not a second axis
+// callers need for STEP 5's own luxury/prime/all figures (those come from
+// the top-level `series` of three separate calls). "Last value of each"
+// (the spec's STEP 5 instruction) means the last entry's `supply` field.
 // ---------------------------------------------------------------------------
 
-export const supplyResponseSchema = z.record(z.string(), z.unknown());
+const supplySeriesEntrySchema = z
+  .object({
+    date: z.string(),
+    supply: z.number().nullish(),
+  })
+  .passthrough();
+
+const supplyBucketSchema = z
+  .object({
+    series: z.array(supplySeriesEntrySchema).default([]),
+  })
+  .passthrough();
+
+export const supplyResponseSchema = z
+  .object({
+    series: z.array(supplySeriesEntrySchema).default([]),
+    all: supplyBucketSchema.optional(),
+    condos: supplyBucketSchema.optional(),
+    coops: supplyBucketSchema.optional(),
+    townhouses: supplyBucketSchema.optional(),
+  })
+  .passthrough();
 export type SupplyResponse = z.infer<typeof supplyResponseSchema>;

@@ -38,6 +38,48 @@ import { topDealSchema, type TopDeal } from '../schema/weeklyReportPayload';
  * no open-ended instructions, and a hard validation gate (below) that
  * rejects anything that doesn't parse -- so drift shows up as a loud
  * failure, not a silently-accepted bad value.
+ *
+ * CONFIRMED FINDING (2026-09-19, live test against real Anthropic +
+ * Marketproof endpoints): the MCP connector request itself is wired up
+ * correctly (correct beta header, correct mcp_servers/mcp_toolset shape --
+ * Anthropic's API accepted the request and attempted to reach the server),
+ * but Marketproof's MCP server at mcp.marketproof.com REJECTS
+ * MARKETPROOF_API_KEY as the `authorization_token`:
+ *
+ *   400 invalid_request_error: "mcp_servers[0] 'marketproof': Authentication
+ *   error while communicating with MCP server. Please check your
+ *   authorization token."
+ *
+ * Confirmed independently with three direct `curl` probes against
+ * https://mcp.marketproof.com/tools (no auth header, `x-api-key`, and
+ * `Authorization: Bearer <MARKETPROOF_API_KEY>`) -- all three get HTTP 401.
+ * The server's `WWW-Authenticate` header and its
+ * `/.well-known/oauth-protected-resource` metadata
+ * (`{"resource":"https://mcp.marketproof.com/tools","authorization_servers":
+ * ["https://mcp.marketproof.com"],"bearer_methods_supported":["header"],
+ * "scopes_supported":["mcp"]}`) confirm this is a real OAuth 2.0 protected
+ * resource (RFC 9728) -- it wants a genuine OAuth access token minted by
+ * that authorization server, NOT the static REST `x-api-key` value. The
+ * REST API and the MCP server are two independently-authenticated surfaces
+ * of the same Marketproof account, not two views of the same credential.
+ *
+ * This is very likely why the `mcp__claude_ai_Marketproof_MCP__*` tools work
+ * inside an interactive claude.ai session for this account already -- that
+ * flow went through Marketproof's OAuth consent screen once, tied to a
+ * claude.ai-managed session. A deployed Railway service can't reuse that;
+ * it would need its own one-time OAuth authorization against
+ * `https://mcp.marketproof.com`, and a place to store/refresh the resulting
+ * token as a secret distinct from `MARKETPROOF_API_KEY`.
+ *
+ * Per this task's own instructions, this is a "stop and report, don't fake
+ * a workaround" finding, not something to silently paper over: this
+ * function IS correctly wired end-to-end and DOES fail safely (catches the
+ * error, logs it clearly, returns `[]` rather than throwing or fabricating
+ * data) -- but it cannot yet fetch a real top_deals list until someone
+ * completes Marketproof's OAuth flow and supplies a real MCP access token.
+ * A `[]` result from this function today is NOT evidence of "no qualifying
+ * deals this week" -- check the logs for this exact error before trusting
+ * an empty result as a real business signal.
  */
 
 const MARKETPROOF_MCP_URL = 'https://mcp.marketproof.com/tools';

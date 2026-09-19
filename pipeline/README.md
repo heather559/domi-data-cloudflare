@@ -67,19 +67,16 @@ scheduled run, and nothing here writes to `weekly_report`.** That's Phase 3.
   `neighborhoodRank`, `supply`. A response that comes back HTTP 200 but
   fails its Zod schema throws `MarketproofSchemaError` immediately rather
   than being silently retried/nulled -- that's a "our understanding of the
-  API shape is wrong" signal, not a transient failure. **Provenance
-  caveat:** `luxuryContractStats`/`weeklyContractStats`/`neighborhoodRank`'s
-  schemas are built from the field names the ground-truth spec's own STEP
-  1-5 usage text quotes (e.g. `lines.p90.cutoff`,
-  `contractsByPeriod[].contractCount/totalPrice/avgDaysOnMarket`); the base
-  `contractStats` and `supply` schemas are inferred (from Marketproof's own
-  `{base, weekly-, monthly-}` dataset naming pattern, and from what STEP 5
-  says is *done* with the response, respectively) rather than quoted
-  anywhere in the spec -- both are kept deliberately loose
-  (`.passthrough()`/`z.record`) until a live call confirms the real shape.
-  `contractStats.test.ts` and `neighborhoodRank.test.ts` are real,
-  read-only integration tests against the live API (skip gracefully if
-  `MARKETPROOF_API_KEY` isn't set).
+  API shape is wrong" signal, not a transient failure. **All five schemas
+  are now CONFIRMED against real, live responses (2026-09-19)** --
+  `contractStats.test.ts` and `neighborhoodRank.test.ts` pass against the
+  live API. Two corrections came out of that live pass (both fixed in
+  `fetch/schemas.ts`, with a comment at each site): `neighborhood-rank`'s
+  per-entry field is `neighborhood`, not `name` as first guessed; and the
+  base `contract-stats` dataset turned out to be QUARTERLY-bucketed with a
+  `rolling90Day`/`previousRolling90Day` comparison section, not a flat
+  aggregate mirroring `weekly-contract-stats` as first guessed -- see the
+  schema file's own comments for the full real shape of both.
 
 - `topDeals/fetchTopDeals.ts` -- the STEP 6 "Top 5 Deals" feature. This is
   the one part of the whole pipeline that can't be built from the plain
@@ -90,12 +87,23 @@ scheduled run, and nothing here writes to `weekly_report`.** That's Phase 3.
   server attached via the MCP connector (`mcp_servers` + `tools:
   [{type: "mcp_toolset", ...}]`, beta `mcp-client-2025-11-20`) -- not an
   open-ended agent, one request that must return only a JSON array
-  matching `topDealSchema`, validated before it's ever trusted. See the
-  file's own header comment for the exact determinism tradeoff (current
+  matching `topDealSchema`, validated before it's ever trusted.
+  **CONFIRMED BLOCKED as of 2026-09-19 (live test): Marketproof's MCP
+  server requires a genuine OAuth 2.0 access token (confirmed via its
+  `/.well-known/oauth-protected-resource` metadata) -- it rejects
+  `MARKETPROOF_API_KEY` (the REST key) as the connector's
+  `authorization_token` with a 401.** The request/error-handling code
+  itself is confirmed correct (right beta header, right shapes, fails
+  safely with `[]` + a clear log line rather than throwing or fabricating)
+  -- what's missing is a real MCP OAuth token, which needs a one-time
+  OAuth authorization against `https://mcp.marketproof.com` (separate from
+  the REST API key) before this feature can return real data. See the
+  file's own header comment for the full finding and the three `curl`
+  probes that confirmed it, and for the determinism tradeoff (current
   models reject an explicit `temperature` parameter outright) and how
-  `pause_turn` is handled. `fetchTopDeals.test.ts` is a real, live
-  integration test (skips gracefully unless both `ANTHROPIC_API_KEY` and
-  `MARKETPROOF_API_KEY` are set).
+  `pause_turn` is handled. `fetchTopDeals.test.ts` passes today, but only
+  in the "fails safely" sense -- see its own header comment before reading
+  a green checkmark as "this returned real deals."
 
 ## Running locally
 
