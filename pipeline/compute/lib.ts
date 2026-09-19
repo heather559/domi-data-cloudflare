@@ -48,6 +48,31 @@ export function lastN<T>(arr: readonly T[], n: number): T[] {
 }
 
 /**
+ * Filters a chronological, date-keyed series to entries at or before
+ * `endDateIso` (compared on the first 10 characters, so this works whether
+ * `date` is a plain "YYYY-MM-DD" or a full ISO datetime string).
+ *
+ * Needed because a live 2026-09 backfill run confirmed that several
+ * Marketproof endpoints (`weekly-contract-stats`, `weekly-sales-stats`,
+ * `supply`) silently IGNORE their own `end_date` request parameter and
+ * always return their series through "today" -- unlike `luxury-contract-stats`
+ * and `neighborhood-rank`, which do respect it (confirmed by direct
+ * comparison of anchored vs. unanchored responses). In the live weekly run
+ * `endDateIso` is always "today" already, so this is a no-op there; it only
+ * matters when computing a HISTORICAL week (backfill), where blindly taking
+ * an unanchored series' raw tail would silently grab the wrong (too-recent)
+ * window instead of that week's real one.
+ */
+export function filterUpToDate<T extends { date: string }>(entries: readonly T[], endDateIso: string): T[] {
+  return entries.filter((e) => e.date.slice(0, 10) <= endDateIso);
+}
+
+/** `lastN` composed with `filterUpToDate` -- the last N entries of a series as of `endDateIso`, not just the array's raw tail. See `filterUpToDate` for why this distinction matters. */
+export function lastNAsOf<T extends { date: string }>(entries: readonly T[], n: number, endDateIso: string): T[] {
+  return lastN(filterUpToDate(entries, endDateIso), n);
+}
+
+/**
  * Trailing rolling average with window size `windowSize`, same length as the
  * input, "pad first (windowSize - 1)" per STEP 1's demand_trend.rolling_avg
  * instruction -- the padded leading entries use however many prior points

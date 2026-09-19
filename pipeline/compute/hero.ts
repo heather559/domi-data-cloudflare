@@ -226,7 +226,13 @@ export function computeStep1(
   // demand_trend + dom_series.luxury/luxury_p95: last 26 p90 periods,
   // chronological, all sharing the SAME date alignment (STEP 1's own note).
   const last26 = lastN(p90.contractsByPeriod, 26);
-  const labels = last26.map((e) => e.date);
+  // The spec (and the schema's own comment) call for plain "YYYY-MM-DD"
+  // labels, but the live Marketproof API returns full ISO datetimes
+  // ("2026-03-09T00:00:00Z") for this field -- confirmed via the
+  // 2026-09 backfill run against real data. Truncate rather than trust
+  // the upstream format; findByDateStartsWith below still matches fine
+  // since it does a prefix match against the (untruncated) source series.
+  const labels = last26.map((e) => e.date.slice(0, 10));
   const counts = last26.map((e) => e.contractCount ?? null);
   const rollingAvg = trailingRollingAverage(counts, 4);
   const domSeriesLuxury = last26.map((e) => e.avgDaysOnMarket ?? null);

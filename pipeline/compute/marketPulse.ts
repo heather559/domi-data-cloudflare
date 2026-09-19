@@ -11,13 +11,19 @@
 import type { ContractPeriodEntry, WeeklyContractStatsResponse, WeeklySalesStatsResponse } from '../fetch/schemas';
 import type { BedroomMix, ByTypeEntry, MarketPulse, TypeTrends } from '../schema/weeklyReportPayload';
 import { pct } from '../lib/pct';
-import { addDaysIso, averageField, findByDateStartsWith, lastN } from './lib';
+import { addDaysIso, averageField, findByDateStartsWith, lastNAsOf } from './lib';
 import type { PriorWeekValues } from './types';
 
 /** Some endpoints name the per-period contract count `contractCount`, others `salesCount` -- read whichever is present, per the same ambiguity already flagged in fetch/schemas.ts for `readTierCount`. */
 function readCount(entry: ContractPeriodEntry | null | undefined): number | null {
   if (!entry) return null;
   return entry.contractCount ?? entry.salesCount ?? null;
+}
+
+/** weekly-contract-stats/luxury-contract-stats name this `avgDaysOnMarket`; weekly-sales-stats' salesByWeek entries were CONFIRMED (live 2026-09-19 backfill run) to instead call it `avgDaysToContract` -- read whichever is present, same alternate-name pattern as readCount above. */
+function readDom(entry: ContractPeriodEntry | null | undefined): number | null {
+  if (!entry) return null;
+  return entry.avgDaysOnMarket ?? entry.avgDaysToContract ?? null;
 }
 
 /** Nearest-date match within a chronological series -- used for the yoy lookup (~364 days back), which the spec allows to be a "nearest week-aligned match" rather than requiring an exact date. */
@@ -154,7 +160,18 @@ export function computeMarketPulseAndTypeTrends(
 
   // --- type_trends: labels from whichever bucket has the fullest series (prefer "all"). ---
   const labelSourceSeries = allSeries.length > 0 ? allSeries : (weeklyContractStats.condos?.contractsByWeek ?? []);
-  const labels = lastN(labelSourceSeries, 52).map((e) => e.date);
+  // weekly-contract-stats was confirmed (live 2026-09 backfill run) to
+  // ignore its own `end_date` param and always return its series through
+  // "today" -- taking a blind `lastN` tail here would silently pull labels
+  // from weeks AFTER this historical week during backfill (verified: it did,
+  // by as much as ~10 weeks). `lastNAsOf` filters to <= weekStart first, so
+  // this is a no-op in the live run (weekStart already IS the series' real
+  // end there) and correct during backfill. Also truncate to plain
+  // "YYYY-MM-DD" -- same live-API ISO-datetime quirk as hero.ts's
+  // demand_trend.labels (see that comment for detail). The alignedSeries
+  // lookup below still matches correctly against the untruncated source
+  // series via findByDateStartsWith's prefix match.
+  const labels = lastNAsOf(labelSourceSeries, 52, weekStart).map((e) => e.date.slice(0, 10));
 
   function alignedSeries(bucket: ContractPeriodEntry[] | undefined, field: (e: ContractPeriodEntry) => number | null | undefined): (number | null)[] {
     return labels.map((date) => {
@@ -247,7 +264,7 @@ export function computeMarketPulseAndTypeTrends(
       const recordedSales = weekAlignedSales ? readCount(weekAlignedSales) : null;
       const ppsf = weekAlignedSales?.ppsf ?? null;
       const discountPct = weekAlignedSales?.discount ?? null;
-      const dom = weekAlignedSales?.avgDaysOnMarket ?? null;
+      const dom = readDom(weekAlignedSales);
 
       const recordedSalesDelta = computeWowYoy(salesCount[type]);
       const ppsfDelta = computeWowYoy(salesPpsf[type]);

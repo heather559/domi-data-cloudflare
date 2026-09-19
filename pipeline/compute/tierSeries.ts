@@ -38,12 +38,23 @@ export function computeTierSeries(
 
   // Coverage = every p90 entry whose date is <= week_start (drops any
   // trailing future/in-progress stub week(s) lux52's series may carry).
-  const coverage = p90.contractsByPeriod.filter((e) => e.date <= weekStart);
+  // Compared on the date-only prefix, not full-string `<=` -- confirmed via
+  // live 2026-09 backfill run that these entries carry a full ISO datetime
+  // ("2026-07-27T00:00:00Z"), which string-sorts AFTER a plain "2026-07-27"
+  // week_start, silently dropping the current week's own entry from
+  // coverage entirely (a real off-by-one confirmed live: computed tier_series
+  // was missing its own most-recent week every time).
+  const coverage = p90.contractsByPeriod.filter((e) => e.date.slice(0, 10) <= weekStart);
 
   const luxuryBandByDate = luxuryBand?.all?.contractsByWeek ?? [];
   const primeBandByDate = primeBand?.all?.contractsByWeek ?? [];
 
   return coverage.map((p90Entry): TierSeriesEntry => {
+    // Keep the raw (possibly full-ISO-datetime) date for internal
+    // exact-matching against p95/p99/luxuryBand/primeBand -- they share the
+    // same raw format since they come from the same API family, so matching
+    // on the untruncated string is safe and simplest. Only the OUTPUT
+    // week_start field needs truncating to plain "YYYY-MM-DD" (see below).
     const date = p90Entry.date;
     const p95Entry = findByDateExact(p95.contractsByPeriod, date);
     const p99Entry = findByDateExact(p99.contractsByPeriod, date);
@@ -79,7 +90,7 @@ export function computeTierSeries(
     const primeBandEntry = findByDateExact(primeBandByDate, date);
 
     return {
-      week_start: date,
+      week_start: date.slice(0, 10),
       luxury: {
         count: luxuryCount,
         volume: luxuryVolume,

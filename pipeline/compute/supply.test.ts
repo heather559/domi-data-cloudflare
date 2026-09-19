@@ -21,6 +21,9 @@ const baseInputs: ComputeSupplyInputs = {
   supplyAll: null,
   supplyLuxury: null,
   supplyPrime: null,
+  // Comfortably after every fixture date above so filterUpToDate's new
+  // weekEnd-anchoring (see supply.ts) never clips existing fixtures.
+  weekEnd: '2026-12-31',
   lux52: null,
   lux52PriorYr: null,
   marketPulseAllSeries: [],
@@ -78,7 +81,15 @@ describe('computeSupply', () => {
   });
 
   it('computes ALL months_supply_wow_pct only when marketPulseAllSeries has >= 53 entries', () => {
-    const shortSeries: ContractPeriodEntry[] = Array.from({ length: 10 }, (_, i) => ({ date: `d${i}`, contractCount: 100 }));
+    // Real weekly-spaced ISO dates, all <= baseInputs.weekEnd, since supply.ts
+    // now clips marketPulseAllSeries to weekEnd via filterUpToDate before
+    // this length check -- a placeholder non-date string like "d0" would be
+    // (correctly) filtered out entirely rather than kept.
+    const weeklyDate = (i: number) => {
+      const d = new Date(Date.UTC(2020, 0, 1 + i * 7));
+      return d.toISOString().slice(0, 10);
+    };
+    const shortSeries: ContractPeriodEntry[] = Array.from({ length: 10 }, (_, i) => ({ date: weeklyDate(i), contractCount: 100 }));
     const result = computeSupply({
       ...baseInputs,
       supplyAll: supplyResp([1000, 1050]),
@@ -87,7 +98,10 @@ describe('computeSupply', () => {
     });
     expect(result.all.months_supply_wow_pct).toBeNull();
 
-    const longSeries: ContractPeriodEntry[] = Array.from({ length: 54 }, (_, i) => ({ date: `d${i}`, contractCount: i < 53 ? 100 : 999 }));
+    const longSeries: ContractPeriodEntry[] = Array.from({ length: 54 }, (_, i) => ({
+      date: weeklyDate(i),
+      contractCount: i < 53 ? 100 : 999,
+    }));
     const result2 = computeSupply({
       ...baseInputs,
       supplyAll: supplyResp([1000, 1050]),

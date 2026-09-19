@@ -64,6 +64,7 @@ export async function buildPayloadForWeek(inputs: BuildPayloadInputs): Promise<W
     supplyAll: phase1.supplyAll,
     supplyLuxury: phase2.supplyLuxury,
     supplyPrime: phase2.supplyPrime,
+    weekEnd,
     lux52: phase1.lux52,
     lux52PriorYr: phase1.lux52PriorYr,
     marketPulseAllSeries: phase1.weeklyContractStats?.all?.contractsByWeek ?? [],

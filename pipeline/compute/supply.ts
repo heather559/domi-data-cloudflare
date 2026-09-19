@@ -10,11 +10,17 @@
 import type { ContractPeriodEntry, LuxuryContractStatsResponse, SupplyResponse, WeeklySalesStatsResponse } from '../fetch/schemas';
 import type { Supply } from '../schema/weeklyReportPayload';
 import { pct } from '../lib/pct';
-import { averageField, findByDateStartsWith } from './lib';
+import { averageField, filterUpToDate, findByDateStartsWith } from './lib';
 
 function readCount(entry: ContractPeriodEntry | null | undefined): number | null {
   if (!entry) return null;
   return entry.contractCount ?? entry.salesCount ?? null;
+}
+
+/** weekly-sales-stats' salesByWeek entries were CONFIRMED (live 2026-09-19 backfill run) to name this field `avgDaysToContract`, not `avgDaysOnMarket` -- read whichever is present, same alternate-name pattern as readCount above (and marketPulse.ts's identical helper). */
+function readDom(entry: ContractPeriodEntry | null | undefined): number | null {
+  if (!entry) return null;
+  return entry.avgDaysOnMarket ?? entry.avgDaysToContract ?? null;
 }
 
 /** absorption_pct = (1 / months_supply) * 100 -- null (never a divide-by-zero) when months_supply is null or 0. */
@@ -44,6 +50,24 @@ export interface ComputeSupplyInputs {
   supplyAll: SupplyResponse | null;
   supplyLuxury: SupplyResponse | null;
   supplyPrime: SupplyResponse | null;
+  /**
+   * Anchors `supply_series`/`active`/the reused `marketPulseAllSeries` to
+   * end at this date. The `supply` REST endpoint was confirmed (live 2026-09
+   * backfill run) to silently ignore its own `end_date` request param and
+   * always return its trailing series through "today" -- in the live weekly
+   * run weekEnd IS "today" so this is a no-op, but during backfill it means
+   * `active` now reflects THAT WEEK's real snapshot (found by date, not just
+   * the raw response's last point) rather than always "today"'s value
+   * (confirmed live: every backfilled week was silently returning the same
+   * constant "today" active count before this fix). `supply_series` shows
+   * however many real historical weeks are actually available on or before
+   * that date -- fewer than 52 for an older backfill week, since the API
+   * itself doesn't expose supply data further back than ~52 weeks from
+   * today -- rather than silently smuggling in future weeks to pad back up
+   * to 52. A disclosed backfill limitation, not a bug this client can fix
+   * further without more historical data from the API.
+   */
+  weekEnd: string;
   lux52: LuxuryContractStatsResponse | null;
   lux52PriorYr: LuxuryContractStatsResponse | null;
   /** weeklyContractStats.all.contractsByWeek, STEP 2's own series -- reused here for ALL's pace-based wow/yoy, zero new calls. */
@@ -62,7 +86,8 @@ export interface ComputeSupplyInputs {
 function buildDomSeriesAll(labels: readonly string[], weeklySalesStats: WeeklySalesStatsResponse | null): (number | null)[] {
   return labels.map((date) => {
     const pooled = weeklySalesStats?.all?.salesByWeek ? findByDateStartsWith(weeklySalesStats.all.salesByWeek, date) : null;
-    if (pooled?.avgDaysOnMarket != null) return pooled.avgDaysOnMarket;
+    const pooledDom = readDom(pooled);
+    if (pooledDom != null) return pooledDom;
 
     // No pooled "all" bucket -- attempt a salesCount-weighted average across condos/coops/townhouses for this week.
     const buckets = [weeklySalesStats?.condos, weeklySalesStats?.coops, weeklySalesStats?.townhouses];
@@ -70,7 +95,7 @@ function buildDomSeriesAll(labels: readonly string[], weeklySalesStats: WeeklySa
     let totalWeight = 0;
     for (const bucket of buckets) {
       const entry = bucket?.salesByWeek ? findByDateStartsWith(bucket.salesByWeek, date) : null;
-      const dom = entry?.avgDaysOnMarket;
+      const dom = readDom(entry);
       const weight = readCount(entry ?? null);
       if (dom != null && weight != null && weight > 0) {
         weightedSum += dom * weight;
@@ -82,9 +107,15 @@ function buildDomSeriesAll(labels: readonly string[], weeklySalesStats: WeeklySa
 }
 
 export function computeSupply(inputs: ComputeSupplyInputs): Supply {
-  const allSeries = (inputs.supplyAll?.series ?? []).map((e) => e.supply ?? null).filter((v): v is number => v !== null);
-  const luxurySeries = (inputs.supplyLuxury?.series ?? []).map((e) => e.supply ?? null).filter((v): v is number => v !== null);
-  const primeSeries = (inputs.supplyPrime?.series ?? []).map((e) => e.supply ?? null).filter((v): v is number => v !== null);
+  const allSeries = filterUpToDate(inputs.supplyAll?.series ?? [], inputs.weekEnd)
+    .map((e) => e.supply ?? null)
+    .filter((v): v is number => v !== null);
+  const luxurySeries = filterUpToDate(inputs.supplyLuxury?.series ?? [], inputs.weekEnd)
+    .map((e) => e.supply ?? null)
+    .filter((v): v is number => v !== null);
+  const primeSeries = filterUpToDate(inputs.supplyPrime?.series ?? [], inputs.weekEnd)
+    .map((e) => e.supply ?? null)
+    .filter((v): v is number => v !== null);
 
   const activeAll = allSeries.at(-1) ?? null;
   const activeLuxury = luxurySeries.at(-1) ?? null;
@@ -137,7 +168,10 @@ export function computeSupply(inputs: ComputeSupplyInputs): Supply {
   // --- ALL months_supply/absorption wow (pace_all_wow = mean(salesCount) over the 52 entries ending one week before the last) ---
   let allMonthsSupplyWowPct: number | null = null;
   let allAbsorptionWowPct: number | null = null;
-  const mpAll = inputs.marketPulseAllSeries;
+  // Same unanchored-series issue as `supply` -- weekly-contract-stats also
+  // ignores `end_date` (confirmed live), so this shared series must be
+  // clipped to weekEnd here too before any tail-relative indexing.
+  const mpAll = filterUpToDate(inputs.marketPulseAllSeries, inputs.weekEnd);
   if (mpAll.length >= 53 && allSeries.length >= 2) {
     const windowEntries = mpAll.slice(mpAll.length - 53, mpAll.length - 1); // 52 entries, ending one before last
     const paceAllWow = averageField(windowEntries, readCount);

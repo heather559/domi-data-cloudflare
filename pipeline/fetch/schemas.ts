@@ -46,6 +46,12 @@ export const contractPeriodEntrySchema = z
     averagePrice: z.number().nullish(),
     ppsf: z.number().nullish(),
     avgDaysOnMarket: z.number().nullish(),
+    // CONFIRMED live 2026-09-19 backfill run: weekly-sales-stats' salesByWeek
+    // entries name this field `avgDaysToContract`, not `avgDaysOnMarket` (the
+    // name weekly-contract-stats/luxury-contract-stats DO use, confirmed
+    // correct for those). Accept either -- callers read whichever is
+    // present, same alternate-name pattern as contractCount/salesCount above.
+    avgDaysToContract: z.number().nullish(),
     discount: z.number().nullish(),
   })
   .passthrough();
