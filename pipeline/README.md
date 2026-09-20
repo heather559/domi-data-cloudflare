@@ -184,3 +184,9 @@ root directory `pipeline/`, weekly cron schedule `5 8 * * 1` (Mon 8:05 UTC --
 comfortably clears both EDT and EST so the DST-safe week math in `lib/week.ts`
 is never evaluated right at a schedule boundary). Railway config/cron itself
 is out of scope for this pass -- not touched here.
+
+## Verified in production (Railway)
+
+Confirmed 2026-09-20: this exact deployment ran successfully on Railway
+itself (not just locally), writing a real shadow row and delivering the
+Slack summary from the deployed service.
