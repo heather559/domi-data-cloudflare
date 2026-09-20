@@ -9,57 +9,65 @@ The complete, ground-truth business-logic spec for the job this is rebuilding
 lives in `../docs/site-data-agent-FULL-PROMPT-2026-09-18.md` and
 `../docs/site-data-monitor-agent-FULL-PROMPT-2026-09-18.md`.
 
-## What `index.ts` actually does now (live shadow run)
+## What `index.ts` actually does now (LIVE -- writes to the real table)
 
+**Promoted to live 2026-09-20**, after shadow-mode verification (see below).
 Running `npm start` (or `npm run build && npm start`):
 
 1. Computes the current (just-ended) Mon-Sun week via DST-safe
    America/New_York date math (`lib/week.ts`).
 2. Upserts a `running` row into `public.pipeline_run_status` for
    `agent_name = 'site-data-agent-v2'` (a distinct name from the existing
-   `site-data-agent` AI routine, so the two never collide while both exist
-   side by side during the rebuild).
+   `site-data-agent` AI routine, so the two never collide -- both still run
+   independently; this one's writes to `weekly_report` naturally supersede
+   the AI routine's, since this fires later in the morning).
 3. Looks up the PRIOR week's real stored values from `public.weekly_report`
    (`io/supabase.ts`'s `getStoredWeeklyReportPayload`, fed through
    `lib/priorWeek.ts`'s `buildPriorWeekValues`) -- per STEP 0's statefulness
-   rule. A missing prior week (expected: `weekly_report` hasn't been updated
-   since 2026-08-31) yields `EMPTY_PRIOR_WEEK`, not an error -- every
-   compute function already nulls the fields it feeds rather than failing.
+   rule. A missing prior week yields `EMPTY_PRIOR_WEEK`, not an error --
+   every compute function already nulls the fields it feeds rather than
+   failing.
 4. Runs the real fetch -> compute -> assemble pipeline for that week,
    reusing the exact orchestration `backfill/run.ts` proved correct
    (`backfill/fetchWeek.ts` + `backfill/buildPayload.ts`), including the
-   STEP 6 `fetchTopDeals` call (confirmed blocked on a missing Marketproof
-   MCP OAuth token -- returns `[]`, logged, not treated as a failure).
+   STEP 6 `fetchTopDeals` call (still blocked on the Marketproof MCP OAuth
+   token -- returns `[]` here, logged, not treated as a failure; the
+   companion `top-deals-weekly-agent` RemoteTrigger routine, which fires 20
+   minutes later, is what actually fills `top_deals` and
+   `weekly_activity_leaderboard` in for real -- see below).
 5. Runs the STEP 7/7.5 output-contract and structural-consistency checks
    (`schema/checks.ts`) against the assembled payload and logs every
    result, pass or fail. A failed check is logged loudly but is NOT fatal
-   here -- this is a shadow run meant to surface findings for a human
-   reviewer, not a hard gate.
-6. Writes the assembled payload to `public.weekly_report_shadow`
-   (`is_provisional = true`, a fresh `run_id` per run) via
-   `io/supabase.ts`'s `writeWeeklyReportShadow`, using the same
-   write-then-read-back confirmation pattern as `writeWeeklyReport`.
-   **Never writes to the real `public.weekly_report`.**
+   here -- these are structural/plausibility checks meant to inform a human
+   reviewer, not hard gates that block the week's report from publishing.
+6. Writes the assembled payload to the **real `public.weekly_report`**
+   table (`is_provisional = true`, matching the convention every historical
+   row already used) via `io/supabase.ts`'s `writeWeeklyReport`, using the
+   write-then-read-back confirmation pattern.
 7. Upserts `pipeline_run_status` to `completed` with a one-line detail
-   (week range, `run_id`, checks passed/failed, whether a prior week was
-   found).
+   (week range, checks passed/failed, whether a prior week was found).
 8. Sends one Slack message summarizing the run: the computed week, which of
-   the 14 payload sections came back with real data vs. null/empty, the
-   STEP 7/7.5 check pass/fail count, and a `week_start` + `run_id` pointer
-   to the shadow row.
+   the 14 payload sections came back with real data vs. null/empty, and the
+   STEP 7/7.5 check pass/fail count.
 9. Exits cleanly (0 on success). On an unhandled error, marks
    `pipeline_run_status` as `failed` with the error detail before exiting 1.
 
-**Confirmed via a real run against production Supabase (2026-09-20,
-week 2026-09-07..2026-09-13):** all 16 checks passed; 12 of 14 sections came
-back with real data (`weekly_activity_leaderboard` and `top_deals` were `[]`,
-both expected -- the same Marketproof MCP OAuth blocker); the shadow row
-wrote and read back cleanly; Slack delivered (200). One infra gap surfaced
-and was fixed during this pass: `public.weekly_report_shadow` was missing
-its `service_role` `SELECT/INSERT/UPDATE/DELETE` grants (present on
-`weekly_report`/`pipeline_run_status` but not on this newer table) --
-granted via a migration; RLS itself was already correctly enabled
-deny-by-default on all three tables, matching the design.
+**Shadow-mode verification, prior to promotion:** a real run against
+production Supabase on 2026-09-20 (week 2026-09-07..2026-09-13), writing to
+`public.weekly_report_shadow`, passed all 16 checks with 12 of 14 sections
+returning real data (the other two were the then-still-open Top Deals /
+weekly-activity gap). One infra gap was found and fixed during that pass:
+`weekly_report_shadow` was missing its `service_role` CRUD grants (present
+on `weekly_report`/`pipeline_run_status` but not on this newer table) --
+granted via a migration; RLS itself was already correctly deny-by-default
+on all three tables, matching the design. `weekly_report_shadow` remains in
+the schema for any future non-live experimentation but is no longer what
+`index.ts` writes to.
+
+**Live-cutover verification:** confirmed 2026-09-20 that this exact
+deployed code writes to and reads back from the real `public.weekly_report`
+table, checked directly against the database (not just trusting the run's
+own log output).
 
 ## Core building blocks `index.ts` wires together
 
