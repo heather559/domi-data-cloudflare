@@ -2,7 +2,7 @@ import { computeWeek } from './lib/week';
 import { addDaysIso } from './compute/lib';
 import { buildPriorWeekValues } from './lib/priorWeek';
 import { sendSlackMessage } from './io/slack';
-import { upsertRunStatus, getStoredWeeklyReportPayload, writeWeeklyReportShadow } from './io/supabase';
+import { upsertRunStatus, getStoredWeeklyReportPayload, writeWeeklyReport } from './io/supabase';
 import { fetchWeekPhase1, fetchWeekPhase2, fetchNeighborhoodWeeklyStats, fetchQuarterCutoffs } from './backfill/fetchWeek';
 import { buildPayloadForWeek } from './backfill/buildPayload';
 import { computeLeaderboards } from './compute/leaderboard';
@@ -23,9 +23,15 @@ import type { WeeklyReportPayload } from './schema/weeklyReportPayload';
  * Adapts the exact fetch -> compute -> assemble -> checks orchestration
  * order already proven correct in `backfill/run.ts`'s `computeForWeek` --
  * the difference here is a single current week (not a historical loop with
- * a stored-payload comparison), a prior-week lookup from the REAL
- * `public.weekly_report` table instead of a loop variable, and a write
- * destination of `public.weekly_report_shadow` (never the real table).
+ * a stored-payload comparison), and a prior-week lookup from the REAL
+ * `public.weekly_report` table instead of a loop variable.
+ *
+ * PROMOTED TO LIVE 2026-09-20: this now writes directly to the real
+ * `public.weekly_report` table (the one the deployed site actually reads),
+ * not `weekly_report_shadow`. Promoted after shadow-mode verification
+ * (backfill against 9 real historical weeks, a live shadow run, and the
+ * companion `top-deals-weekly-agent` routine closing the Top Deals /
+ * weekly_activity_leaderboard gap) at the owner's explicit direction.
  *
  * Uses agent_name = 'site-data-agent-v2' (not 'site-data-agent') so this
  * never collides with the existing AI-agent routine's own status rows while
@@ -174,9 +180,8 @@ function buildSlackSummary(args: {
   checks: CheckResult[];
   priorWeekStart: string;
   priorWeekFound: boolean;
-  runId: string;
 }): string {
-  const { weekStart, weekEnd, sections, checks, priorWeekStart, priorWeekFound, runId } = args;
+  const { weekStart, weekEnd, sections, checks, priorWeekStart, priorWeekFound } = args;
   const failedChecks = checks.filter((c) => !c.ok);
   const passedCount = checks.length - failedChecks.length;
 
@@ -194,14 +199,14 @@ function buildSlackSummary(args: {
     : `Prior week (${priorWeekStart}): NOT found in public.weekly_report (expected -- not updated since 2026-08-31). All WoW/streak/rank_delta fields fed by it are null this run, not fabricated.`;
 
   return [
-    `:test_tube: ${AGENT_NAME}: shadow run completed -- week of ${weekStart} to ${weekEnd}`,
+    `:white_check_mark: ${AGENT_NAME}: LIVE run completed -- week of ${weekStart} to ${weekEnd}`,
     checksLine,
     priorWeekLine,
     '',
     'Payload sections:',
     sectionLines,
     '',
-    `Shadow row: public.weekly_report_shadow WHERE week_start = '${weekStart}' AND run_id = '${runId}' (is_provisional = true -- NOT the real weekly_report table).`,
+    `Written to public.weekly_report WHERE week_start = '${weekStart}' -- this is now the real, live table the site reads.`,
   ].join('\n');
 }
 
@@ -228,18 +233,18 @@ async function main(weekStart: string, weekEnd: string): Promise<void> {
   console.log(`[${AGENT_NAME}] payload section summary:`);
   for (const s of sections) console.log(`  ${s.key}: ${s.status}`);
 
-  console.log(`[${AGENT_NAME}] writing payload to public.weekly_report_shadow (is_provisional=true) ...`);
-  const writeResult = await writeWeeklyReportShadow(weekStart, weekEnd, payload, true);
+  console.log(`[${AGENT_NAME}] writing payload to public.weekly_report (LIVE table, is_provisional=true) ...`);
+  const writeResult = await writeWeeklyReport(weekStart, weekEnd, payload, true);
   if (!writeResult.confirmed) {
     throw new Error(
-      `writeWeeklyReportShadow did not confirm a fresh write for week_start=${weekStart} run_id=${writeResult.runId} (generated_at=${writeResult.generatedAt})`,
+      `writeWeeklyReport did not confirm a fresh write for week_start=${weekStart} (generated_at=${writeResult.generatedAt})`,
     );
   }
   console.log(
-    `[${AGENT_NAME}] weekly_report_shadow write confirmed: week_start=${weekStart} run_id=${writeResult.runId} generated_at=${writeResult.generatedAt}`,
+    `[${AGENT_NAME}] weekly_report write confirmed: week_start=${weekStart} generated_at=${writeResult.generatedAt}`,
   );
 
-  const statusDetail = `week ${weekStart}..${weekEnd}, run_id ${writeResult.runId}, ${checks.length - failedChecks.length}/${checks.length} checks passed, prior_week_found=${priorWeekFound}`;
+  const statusDetail = `week ${weekStart}..${weekEnd}, LIVE write to weekly_report, ${checks.length - failedChecks.length}/${checks.length} checks passed, prior_week_found=${priorWeekFound}`;
   await upsertRunStatus(AGENT_NAME, weekStart, 'completed', statusDetail);
   console.log(`[${AGENT_NAME}] pipeline_run_status upserted: completed`);
 
@@ -250,7 +255,6 @@ async function main(weekStart: string, weekEnd: string): Promise<void> {
     checks,
     priorWeekStart,
     priorWeekFound,
-    runId: writeResult.runId,
   });
   console.log(`[${AGENT_NAME}] sending Slack notification`);
   const slackResult = await sendSlackMessage(slackText);
