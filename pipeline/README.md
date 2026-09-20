@@ -185,8 +185,8 @@ comfortably clears both EDT and EST so the DST-safe week math in `lib/week.ts`
 is never evaluated right at a schedule boundary). Railway config/cron itself
 is out of scope for this pass -- not touched here.
 
-## Verified in production (Railway)
+## Live cutover verification
 
-Confirmed 2026-09-20: this exact deployment ran successfully on Railway
-itself (not just locally), writing a real shadow row and delivering the
-Slack summary from the deployed service.
+Confirmed 2026-09-20: this exact code, deployed to Railway, writes to the
+real `public.weekly_report` table (not the shadow table) and was verified
+directly against the live database after a forced production run.
