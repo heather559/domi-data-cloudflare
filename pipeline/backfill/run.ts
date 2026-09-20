@@ -43,7 +43,8 @@ import {
 } from '../schema/checks';
 import type { PriorWeekValues } from '../compute/types';
 import { EMPTY_PRIOR_WEEK } from '../compute/types';
-import type { WeeklyReportPayload, TierCard } from '../schema/weeklyReportPayload';
+import type { WeeklyReportPayload } from '../schema/weeklyReportPayload';
+import { buildPriorWeekValues } from '../lib/priorWeek';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 
@@ -62,30 +63,6 @@ async function fetchStoredWeeks(): Promise<StoredWeekRow[]> {
 
   if (error) throw new Error(`Failed to read weekly_report: ${error.message}`);
   return (data ?? []) as StoredWeekRow[];
-}
-
-/** Builds this week's PriorWeekValues from the PREVIOUS week's real stored payload (or EMPTY_PRIOR_WEEK if there is none). */
-function priorFromStoredPayload(prevPayload: WeeklyReportPayload | null): PriorWeekValues {
-  if (!prevPayload) return EMPTY_PRIOR_WEEK;
-
-  const pickTierCard = (t: TierCard): TierCard => t;
-
-  return {
-    prevSupplyBandLabel: prevPayload.sowhat.supply_band_label,
-    prevStreakWeeks: prevPayload.sowhat.streak_weeks,
-    prevLuxuryCount: prevPayload.hero.luxury_count,
-    prevLuxuryVolume: prevPayload.hero.luxury_volume,
-    prevQuarterlyHistory: prevPayload.tiers.history_quarterly,
-    prevTiers: {
-      luxury: pickTierCard(prevPayload.tiers.luxury),
-      prime: pickTierCard(prevPayload.tiers.prime),
-      trophy: pickTierCard(prevPayload.tiers.trophy),
-    },
-    prevPulseAll: {
-      contracts: prevPayload.market_pulse.all.contracts,
-      volume: prevPayload.market_pulse.all.volume,
-    },
-  };
 }
 
 async function computeForWeek(
@@ -206,14 +183,14 @@ async function main(): Promise<void> {
       // Next iteration's "prior" is THIS WEEK'S REAL STORED payload, not our
       // own computed result -- isolates each week's comparison from
       // compounding drift (see module header).
-      prior = priorFromStoredPayload(stored.payload);
+      prior = buildPriorWeekValues(stored.payload);
     } catch (err) {
       console.error(`[backfill] ${stored.week_start}: FAILED with an error -- ${err instanceof Error ? err.stack : String(err)}`);
       overallSummary.push({ week_start: stored.week_start, exact: 0, close: 0, mismatch: 0, missing: 0, checksFailed: -1 });
       // Even on a hard failure, carry forward the real stored payload as
       // next week's prior -- one week's fetch/compute failure shouldn't
       // also corrupt the next week's inputs.
-      prior = priorFromStoredPayload(stored.payload);
+      prior = buildPriorWeekValues(stored.payload);
     }
   }
 

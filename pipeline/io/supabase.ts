@@ -1,4 +1,6 @@
+import { randomUUID } from 'node:crypto';
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
+import type { WeeklyReportPayload } from '../schema/weeklyReportPayload';
 
 /**
  * Supabase client factory + typed I/O helpers for the pipeline.
@@ -179,4 +181,93 @@ function isRecent(isoTimestamp: string, withinMs: number): boolean {
   const ts = new Date(isoTimestamp).getTime();
   if (Number.isNaN(ts)) return false;
   return Date.now() - ts <= withinMs;
+}
+
+/**
+ * Reads the REAL, stored `weekly_report.payload` for one exact `week_start`,
+ * or `null` if no row exists for that week -- used by the live run
+ * (`index.ts`) to look up the prior week's real values per STEP 0's
+ * statefulness rule (see `lib/priorWeek.ts`'s `buildPriorWeekValues`, which
+ * already handles a `null` result by returning `EMPTY_PRIOR_WEEK` -- a
+ * missing prior week is an expected, non-error state, not treated specially
+ * here).
+ */
+export async function getStoredWeeklyReportPayload(weekStart: string): Promise<WeeklyReportPayload | null> {
+  const supabase = getSupabaseClient();
+
+  const { data, error } = await supabase
+    .from('weekly_report')
+    .select('payload')
+    .eq('week_start', weekStart)
+    .maybeSingle();
+
+  if (error) {
+    throw new Error(`getStoredWeeklyReportPayload(${weekStart}) failed: ${error.message}`);
+  }
+
+  return (data as { payload: WeeklyReportPayload } | null)?.payload ?? null;
+}
+
+export interface WriteWeeklyReportShadowResult {
+  confirmed: boolean;
+  runId: string;
+  generatedAt: string | null;
+}
+
+/**
+ * Writes a NEW row to `public.weekly_report_shadow` -- an INSERT, not an
+ * upsert, since the table's own primary key is `(week_start, run_id)`
+ * specifically so multiple shadow runs for the same week can coexist for
+ * comparison (unlike `weekly_report`, which is one row per `week_start`).
+ * `run_id` is generated here (rather than left to the column's own
+ * `gen_random_uuid()` default) so the caller can report it immediately --
+ * in logs, in the Slack summary, and in the write-then-read-back
+ * confirmation below -- without a second round trip to discover it.
+ *
+ * Mirrors `writeWeeklyReport`'s write-then-read-back confirmation pattern:
+ * a write isn't trusted until it's read back and its `generated_at` is
+ * confirmed fresh.
+ *
+ * This function NEVER touches `public.weekly_report` -- that table is
+ * intentionally untouched by every function in this file's "shadow" path.
+ */
+export async function writeWeeklyReportShadow(
+  weekStart: string,
+  weekEnd: string,
+  payload: unknown,
+  isProvisional: boolean,
+): Promise<WriteWeeklyReportShadowResult> {
+  const supabase = getSupabaseClient();
+
+  const runId = randomUUID();
+  const generatedAt = new Date().toISOString();
+
+  const { error: writeError } = await supabase.from('weekly_report_shadow').insert({
+    week_start: weekStart,
+    week_end: weekEnd,
+    is_provisional: isProvisional,
+    payload,
+    generated_at: generatedAt,
+    run_id: runId,
+  });
+
+  if (writeError) {
+    throw new Error(`writeWeeklyReportShadow(${weekStart}, run_id=${runId}) failed to write: ${writeError.message}`);
+  }
+
+  const { data, error: readError } = await supabase
+    .from('weekly_report_shadow')
+    .select('generated_at')
+    .eq('week_start', weekStart)
+    .eq('run_id', runId)
+    .maybeSingle();
+
+  if (readError) {
+    throw new Error(`writeWeeklyReportShadow(${weekStart}, run_id=${runId}) failed to confirm: ${readError.message}`);
+  }
+
+  const confirmedGeneratedAt = (data as { generated_at: string } | null)?.generated_at ?? null;
+  const confirmed = confirmedGeneratedAt !== null && isRecent(confirmedGeneratedAt, 2 * 60 * 1000);
+
+  return { confirmed, runId, generatedAt: confirmedGeneratedAt };
 }
