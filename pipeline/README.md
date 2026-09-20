@@ -188,10 +188,13 @@ dependency-light service with no need for ESM-only packages.
 ## Deployment
 
 Runs on Railway as service `domi-data-pipeline` in the `domi-data` project,
-root directory `pipeline/`, weekly cron schedule `5 8 * * 1` (Mon 8:05 UTC --
-comfortably clears both EDT and EST so the DST-safe week math in `lib/week.ts`
-is never evaluated right at a schedule boundary). Railway config/cron itself
-is out of scope for this pass -- not touched here.
+root directory `pipeline/`, weekly cron schedule `30 8 * * 1` (Mon 8:30 UTC
+-- 4:30am EDT / 3:30am EST, at the owner's request to finish by 5am Eastern
+regardless of DST, while still comfortably clearing midnight ET in both EDT
+and EST so the DST-safe week math in `lib/week.ts` is never evaluated right
+at a schedule boundary). The companion `top-deals-weekly-agent` RemoteTrigger
+routine runs 20 minutes later (`50 8 * * 1`, 8:50 UTC) so this week's row
+already exists when it patches in Top Deals / weekly_activity_leaderboard.
 
 ## Live cutover verification
 
