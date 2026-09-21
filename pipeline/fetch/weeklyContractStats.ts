@@ -5,15 +5,16 @@ import { weeklyContractStatsResponseSchema, type WeeklyContractStatsResponse } f
 export interface WeeklyContractStatsParams {
   q: string;
   /**
-   * Anchors the returned series to end on this date instead of "now" --
-   * needed for backfill (a historical week's own live run would never pass
-   * this, since it always wants the series ending today). Not exercised
-   * against a real response in this pass (no working MARKETPROOF_API_KEY
-   * available) -- modeled defensively on the same `end_date` pattern
-   * already CONFIRMED for luxury-contract-stats (STEP 1.6/1.7/4(d)), per
-   * the task brief's own note that Marketproof's endpoints "support
-   * historical date ranges/end_date params" generally. Confirm against a
-   * real call before trusting this for backfill in production.
+   * Anchors the returned series to end on this date instead of "now".
+   * Always pinned for backfill (a historical week has no other way to
+   * reconstruct itself). Deliberately OMITTED (left `undefined`) on the
+   * live pipeline's "current week" calls as of 2026-09-21 -- live testing
+   * found Marketproof snaps a supplied `end_date` on weekly-grain endpoints
+   * back a full week from the date requested, and the owner's call is to
+   * match the old site-data-agent's "as of right now, no end_date"
+   * behavior exactly rather than pin a date. See the `AnchorMode` docs in
+   * `backfill/fetchWeek.ts` for the full decision and which calls fall in
+   * which bucket.
    */
   end_date?: string;
 }

@@ -70,7 +70,7 @@ async function computeForWeek(
   weekEnd: string,
   prior: PriorWeekValues,
 ): Promise<{ payload: WeeklyReportPayload; checks: CheckResult[] }> {
-  const phase1 = await fetchWeekPhase1(weekStart, weekEnd);
+  const phase1 = await fetchWeekPhase1(weekStart, weekEnd, 'backfill');
 
   const cutoffs = {
     luxury: phase1.lux52?.lines.p90.cutoff ?? null,
@@ -78,7 +78,7 @@ async function computeForWeek(
     trophy: phase1.lux52?.lines.p99.cutoff ?? null,
   };
 
-  const phase2 = await fetchWeekPhase2(weekEnd, cutoffs);
+  const phase2 = await fetchWeekPhase2(weekEnd, cutoffs, 'backfill');
 
   // Determine the top-10-by-volume / top-10-by-intensity(>=11) name sets
   // directly from phase1's hoodRankNoMinPrice (no anchored data or weekly
@@ -90,7 +90,7 @@ async function computeForWeek(
     weeklyStats: new Map(),
   });
   const names = [...new Set([...preliminary.leaderboard.map((r) => r.name), ...preliminary.concentrated_leaderboard.map((r) => r.name)])];
-  const neighborhoodWeeklyStats = await fetchNeighborhoodWeeklyStats(names, cutoffs.luxury, weekStart, weekEnd);
+  const neighborhoodWeeklyStats = await fetchNeighborhoodWeeklyStats(names, cutoffs.luxury, weekStart, weekEnd, 'backfill');
 
   // STEP 1.7: quarterly history, conditional fetch.
   const plan = planQuarterlyHistoryUpdate(prior.prevQuarterlyHistory, weekEnd);

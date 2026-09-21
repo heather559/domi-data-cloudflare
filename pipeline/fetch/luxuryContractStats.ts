@@ -4,7 +4,10 @@ import { luxuryContractStatsResponseSchema, type LuxuryContractStatsResponse } f
 /**
  * Request params for luxury-contract-stats, per STEP 1/1.5/1.6/1.7 of the
  * ground-truth spec. `end_date` anchors the trailing window to end on that
- * date instead of "now" (used for prior-year and quarterly-history pulls).
+ * date instead of "now" -- always pinned for backfill and for historical
+ * reference calls (prior-year, quarterly-history), but deliberately
+ * OMITTED on the live pipeline's own "current week" calls (lux52/lux13) as
+ * of 2026-09-21. See the AnchorMode notes in backfill/fetchWeek.ts.
  */
 export interface LuxuryContractStatsParams {
   q: string;

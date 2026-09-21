@@ -12,6 +12,7 @@ export interface NeighborhoodRankParams {
   limit: number;
   min_contracts: number;
   min_price?: number;
+  /** Pinned for backfill and for historical-reference calls (e.g. the prior-year rank_delta comparison), omitted on live "current week" calls -- see the AnchorMode notes in backfill/fetchWeek.ts. */
   end_date?: string;
   /**
    * NOT a body field -- per STEP 4(b)'s exact usage

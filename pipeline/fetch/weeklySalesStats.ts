@@ -4,7 +4,7 @@ import { weeklySalesStatsResponseSchema, type WeeklySalesStatsResponse } from '.
 /** Request params for weekly-sales-stats, per STEP 3/3.5 of the spec. */
 export interface WeeklySalesStatsParams {
   q: string;
-  /** Backfill-only historical anchor -- see the identical note on WeeklyContractStatsParams.end_date. */
+  /** Pinned for backfill, omitted on live "current week" calls -- see the identical note on WeeklyContractStatsParams.end_date. */
   end_date?: string;
 }
 

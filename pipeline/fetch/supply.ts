@@ -6,7 +6,7 @@ export interface SupplyParams {
   granularity: 'weekly' | string;
   borough: string;
   min_price?: number;
-  /** Backfill-only historical anchor -- see the identical note on WeeklyContractStatsParams.end_date. */
+  /** Pinned for backfill, omitted on live "current week" calls -- see the identical note on WeeklyContractStatsParams.end_date. */
   end_date?: string;
 }
 

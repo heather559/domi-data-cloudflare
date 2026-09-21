@@ -111,8 +111,10 @@ async function computeCurrentWeek(weekStart: string, weekEnd: string): Promise<C
   }
   const prior = buildPriorWeekValues(prevPayload);
 
-  console.log(`[${AGENT_NAME}] fetching Marketproof data (phase 1, independent calls) ...`);
-  const phase1 = await fetchWeekPhase1(weekStart, weekEnd);
+  console.log(
+    `[${AGENT_NAME}] fetching Marketproof data (phase 1, independent calls, mode=live -- current-week calls omit end_date, matching the old site-data-agent's "as of now" behavior) ...`,
+  );
+  const phase1 = await fetchWeekPhase1(weekStart, weekEnd, 'live');
 
   const cutoffs = {
     luxury: phase1.lux52?.lines.p90.cutoff ?? null,
@@ -120,8 +122,8 @@ async function computeCurrentWeek(weekStart: string, weekEnd: string): Promise<C
     trophy: phase1.lux52?.lines.p99.cutoff ?? null,
   };
 
-  console.log(`[${AGENT_NAME}] fetching Marketproof data (phase 2, cutoff-anchored) ...`);
-  const phase2 = await fetchWeekPhase2(weekEnd, cutoffs);
+  console.log(`[${AGENT_NAME}] fetching Marketproof data (phase 2, cutoff-anchored, mode=live) ...`);
+  const phase2 = await fetchWeekPhase2(weekEnd, cutoffs, 'live');
 
   // Determine the top-10-by-volume / top-10-by-intensity(>=11) name sets
   // directly from phase1's hoodRankNoMinPrice (no anchored data or weekly
@@ -134,7 +136,7 @@ async function computeCurrentWeek(weekStart: string, weekEnd: string): Promise<C
   });
   const names = [...new Set([...preliminary.leaderboard.map((r) => r.name), ...preliminary.concentrated_leaderboard.map((r) => r.name)])];
   console.log(`[${AGENT_NAME}] fetching per-neighborhood weekly stats for ${names.length} leaderboard neighborhood(s) ...`);
-  const neighborhoodWeeklyStats = await fetchNeighborhoodWeeklyStats(names, cutoffs.luxury, weekStart, weekEnd);
+  const neighborhoodWeeklyStats = await fetchNeighborhoodWeeklyStats(names, cutoffs.luxury, weekStart, weekEnd, 'live');
 
   // STEP 1.7: quarterly history, conditional fetch.
   const plan = planQuarterlyHistoryUpdate(prior.prevQuarterlyHistory, weekEnd);
